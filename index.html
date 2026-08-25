@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Pose Lab | Esqueleto 3D</title>
+  <meta name="theme-color" content="#0a0f16">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      color-scheme: dark;
+      --panel: rgba(11, 14, 20, 0.76);
+      --panel-strong: rgba(12, 16, 23, 0.9);
+      --panel-border: rgba(255, 255, 255, 0.08);
+      --panel-border-strong: rgba(127, 211, 255, 0.2);
+      --text: #f5f7fb;
+      --muted: #b8c0cc;
+      --accent: #7fd3ff;
+      --accent-2: #95f0b6;
+      --accent-3: #ffd28a;
+      --bg-1: #05070a;
+      --bg-2: #0d1219;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(127, 211, 255, 0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(255, 210, 138, 0.08), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(149, 240, 182, 0.12), transparent 28%),
+        linear-gradient(180deg, var(--bg-1), var(--bg-2));
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+    }
+
+    #viewport {
+      position: fixed;
+      inset: 0;
+    }
+
+    #canvas-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    #loading {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      padding: 16px 20px;
+      border-radius: 14px;
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+      min-width: 250px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    #ui {
+      position: fixed;
+      top: 14px;
+      left: 14px;
+      width: min(390px, calc(100vw - 28px));
+      max-height: calc(100vh - 28px);
+      overflow: auto;
+      z-index: 4;
+      box-sizing: border-box;
+      padding: 16px;
+      border: 1px solid var(--panel-border);
+      border-radius: 18px;
+      background: var(--panel);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+    }
+
+    .brand {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .brand-identity {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 50px;
+      height: 50px;
+      flex: 0 0 auto;
+      border-radius: 14px;
+      box-shadow: 0 10px 28px rgba(71, 174, 214, 0.18);
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 19px;
+      letter-spacing: -0.02em;
+    }
+
+    .brand .eyebrow {
+      margin: 0 0 6px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+    }
+
+    .brand .meta {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .brand .badge {
+      flex: 0 0 auto;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(127, 211, 255, 0.16), rgba(149, 240, 182, 0.14));
+      border: 1px solid rgba(127, 211, 255, 0.2);
+      color: var(--text);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .tip {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .section {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .section:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    .control {
+      margin-bottom: 12px;
+      padding: 10px 10px 12px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .control label {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+      font-size: 13px;
+    }
+
+    .control .value {
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .control input[type="range"] {
+      width: 100%;
+      appearance: none;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(127, 211, 255, 0.75), rgba(149, 240, 182, 0.7));
+      outline: none;
+    }
+
+    .control input[disabled] {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .control input[type="range"]::-webkit-slider-thumb {
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.86);
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 6px 18px rgba(127, 211, 255, 0.35);
+      cursor: pointer;
+    }
+
+    .control input[type="range"]::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.86);
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 6px 18px rgba(127, 211, 255, 0.35);
+      cursor: pointer;
+    }
+
+    .control input[type="range"]::-moz-range-track {
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(127, 211, 255, 0.75), rgba(149, 240, 182, 0.7));
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin: 10px 0 0;
+      flex-wrap: wrap;
+    }
+
+    .actions button {
+      appearance: none;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 12px;
+      font: inherit;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .actions button:hover {
+      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .actions button.primary {
+      border-color: rgba(127, 211, 255, 0.35);
+      background: linear-gradient(135deg, rgba(127, 211, 255, 0.18), rgba(149, 240, 182, 0.14));
+    }
+
+    .quick-hints {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 0;
+    }
+
+    .quick-hint {
+      padding: 6px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.03em;
+    }
+
+    .status {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 720px) {
+      #ui {
+        top: auto;
+        bottom: 12px;
+        left: 12px;
+        width: calc(100vw - 24px);
+        max-height: 56vh;
+      }
+    }
+
+    /* App shell */
+    :root {
+      --sheet-peek: calc(68px + env(safe-area-inset-bottom, 0px));
+      --sheet-open-height: clamp(260px, 42dvh, 460px);
+      --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    html,
+    body {
+      height: 100dvh;
+      overscroll-behavior: none;
+      font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+        radial-gradient(circle at 76% 42%, transparent 0, rgba(2, 5, 8, 0.13) 46%, rgba(2, 5, 8, 0.48) 100%);
+      background-size: 48px 48px, 48px 48px, auto;
+      mask-image: linear-gradient(to bottom, black, transparent 80%);
+    }
+
+    #viewport,
+    #canvas-container,
+    #canvas-container canvas {
+      width: 100%;
+      height: 100%;
+      touch-action: none;
+    }
+
+    #viewport {
+      transition: width 0.36s var(--ease-out), height 0.36s var(--ease-out);
+    }
+
+    #loading {
+      z-index: 8;
+      width: min(300px, calc(100vw - 48px));
+      min-width: 0;
+      box-sizing: border-box;
+      padding: 15px 18px 15px 48px;
+      border-radius: 16px;
+      border-color: rgba(127, 211, 255, 0.16);
+      background: rgba(7, 11, 16, 0.9);
+      color: #eef9ff;
+      font-size: 13px;
+      text-align: left;
+    }
+
+    #loading::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      width: 14px;
+      height: 14px;
+      margin-top: -8px;
+      border: 2px solid rgba(127, 211, 255, 0.2);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: loading-spin 0.8s linear infinite;
+    }
+
+    @keyframes loading-spin {
+      to { transform: rotate(360deg); }
+    }
+
+    #ui {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      overflow: hidden;
+      border-color: rgba(139, 203, 227, 0.14);
+      border-radius: 22px;
+      background:
+        linear-gradient(160deg, rgba(18, 25, 33, 0.94), rgba(7, 11, 16, 0.9));
+      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.48), inset 0 1px rgba(255, 255, 255, 0.04);
+    }
+
+    .panel-scroll {
+      min-height: 0;
+      padding: 18px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(127, 211, 255, 0.24) transparent;
+    }
+
+    .panel-scroll::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .panel-scroll::-webkit-scrollbar-thumb {
+      border-radius: 99px;
+      background: rgba(127, 211, 255, 0.24);
+    }
+
+    .sheet-toggle {
+      display: none;
+      width: 100%;
+      min-height: 64px;
+      appearance: none;
+      border: 0;
+      border-bottom: 1px solid transparent;
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .sheet-handle {
+      display: block;
+      width: 42px;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.28);
+    }
+
+    .sheet-title {
+      font-family: "Avenir Next Condensed", "Franklin Gothic Medium", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .sheet-count {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .sheet-chevron {
+      width: 9px;
+      height: 9px;
+      border-top: 2px solid currentColor;
+      border-left: 2px solid currentColor;
+      transform: rotate(45deg);
+      transition: transform 0.28s var(--ease-out);
+    }
+
+    #ui.is-open .sheet-chevron {
+      transform: rotate(225deg);
+    }
+
+    .mobile-hud {
+      display: none;
+    }
+
+    .brand h1,
+    .section h2,
+    .section-toggle {
+      font-family: "Avenir Next Condensed", "Franklin Gothic Medium", sans-serif;
+    }
+
+    .brand h1 {
+      font-size: 22px;
+      line-height: 1;
+      letter-spacing: -0.035em;
+    }
+
+    .brand .eyebrow {
+      margin-bottom: 7px;
+      font-weight: 700;
+    }
+
+    .brand .badge {
+      border-color: rgba(255, 210, 138, 0.26);
+      background: linear-gradient(135deg, rgba(127, 211, 255, 0.13), rgba(255, 210, 138, 0.12));
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr 1fr;
+      gap: 8px;
+    }
+
+    .actions button {
+      min-height: 44px;
+      padding: 9px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .section {
+      margin-top: 10px;
+      padding-top: 10px;
+    }
+
+    .section-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 42px;
+      padding: 0;
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-align: left;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .section-toggle::after {
+      content: "+";
+      display: grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      color: var(--accent);
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 400;
+      transition: transform 0.22s var(--ease-out), background 0.22s ease;
+    }
+
+    .section:not(.is-collapsed) .section-toggle::after {
+      content: "−";
+      background: rgba(127, 211, 255, 0.08);
+    }
+
+    .section.is-collapsed .section-controls {
+      display: none;
+    }
+
+    .control {
+      margin-bottom: 9px;
+      padding: 11px 12px 13px;
+      border-color: rgba(255, 255, 255, 0.055);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018));
+    }
+
+    .control label {
+      margin-bottom: 9px;
+      font-weight: 600;
+    }
+
+    .control input[type="range"] {
+      display: block;
+      height: 32px;
+      margin-block: -10px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 6px;
+      touch-action: none;
+    }
+
+    .control input[type="range"]::-webkit-slider-thumb {
+      width: 20px;
+      height: 20px;
+    }
+
+    .control input[type="range"]::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+    }
+
+    .status a {
+      color: var(--accent);
+      text-decoration-color: rgba(127, 211, 255, 0.34);
+      text-underline-offset: 3px;
+    }
+
+    @media (min-width: 721px) {
+      .section-toggle::after {
+        display: none;
+      }
+
+      .section.is-collapsed .section-controls {
+        display: block;
+      }
+    }
+
+    @media (max-width: 720px) {
+      #ui {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: var(--sheet-open-height);
+        max-height: none;
+        border-right: 0;
+        border-bottom: 0;
+        border-left: 0;
+        border-radius: 24px 24px 0 0;
+        transform: translateY(calc(100% - var(--sheet-peek)));
+        transition: transform 0.36s var(--ease-out);
+        will-change: transform;
+      }
+
+      #ui.is-open {
+        transform: translateY(0);
+      }
+
+      body.panel-open #viewport {
+        height: calc(100dvh - var(--sheet-open-height));
+      }
+
+      .sheet-toggle {
+        display: grid;
+        flex: 0 0 var(--sheet-peek);
+        grid-template-columns: 1fr auto auto;
+        grid-template-rows: 12px 1fr;
+        align-items: center;
+        gap: 0 12px;
+        padding: 8px max(18px, env(safe-area-inset-right)) env(safe-area-inset-bottom, 0px) max(18px, env(safe-area-inset-left));
+        border-bottom-color: rgba(255, 255, 255, 0.07);
+      }
+
+      .sheet-handle {
+        grid-column: 1 / -1;
+        justify-self: center;
+      }
+
+      .sheet-title {
+        justify-self: start;
+        font-size: 16px;
+      }
+
+      .sheet-count {
+        justify-self: end;
+      }
+
+      .sheet-chevron {
+        margin-right: 4px;
+      }
+
+      .panel-scroll {
+        padding: 16px max(16px, env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left));
+      }
+
+      .mobile-hud {
+        position: fixed;
+        top: calc(10px + env(safe-area-inset-top, 0px));
+        right: max(12px, env(safe-area-inset-right));
+        left: max(12px, env(safe-area-inset-left));
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        pointer-events: none;
+      }
+
+      .mobile-hud-logo {
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+        box-shadow: 0 6px 18px rgba(71, 174, 214, 0.22);
+      }
+
+      .mobile-hud-title {
+        font-family: "Avenir Next Condensed", "Franklin Gothic Medium", sans-serif;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .mobile-hud-mode {
+        margin-left: auto;
+        padding: 7px 9px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+        background: rgba(8, 12, 17, 0.62);
+        color: var(--muted);
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        backdrop-filter: blur(12px);
+      }
+
+      .brand {
+        margin-bottom: 8px;
+      }
+
+      .brand h1 {
+        font-size: 21px;
+      }
+
+      .brand-logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+      }
+
+      .brand .meta {
+        max-width: 260px;
+      }
+
+      .actions button {
+        min-width: 0;
+        min-height: 46px;
+      }
+
+      .quick-hints {
+        gap: 6px;
+        margin-top: 10px;
+      }
+
+      .quick-hint {
+        padding: 6px 8px;
+        font-size: 10px;
+      }
+
+      .section-toggle {
+        position: sticky;
+        top: -16px;
+        z-index: 2;
+        min-height: 48px;
+        background: rgba(10, 15, 21, 0.95);
+        backdrop-filter: blur(12px);
+      }
+
+      .control input[type="range"] {
+        height: 44px;
+        margin-block: -13px;
+      }
+
+      .control {
+        border-radius: 16px;
+      }
+
+      .control label {
+        font-size: 14px;
+      }
+
+      .control input[type="range"]::-webkit-slider-thumb {
+        width: 24px;
+        height: 24px;
+      }
+
+      .control input[type="range"]::-moz-range-thumb {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand .badge {
+        display: none;
+      }
+
+      .actions {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .actions button {
+        padding-inline: 6px;
+        font-size: 11px;
+      }
+    }
+
+    @media (max-height: 560px) and (orientation: landscape) {
+      #ui {
+        right: 8px;
+        bottom: 8px;
+        left: auto;
+        width: min(320px, 38vw);
+        height: calc(100dvh - 16px);
+        border: 1px solid var(--panel-border);
+        border-radius: 18px;
+        transform: translateY(calc(100% - var(--sheet-peek)));
+      }
+
+      #ui.is-open {
+        transform: translateY(0);
+      }
+
+      body.panel-open #viewport {
+        width: calc(100vw - min(320px, 38vw) - 8px);
+        height: 100dvh;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+</head>
+<body>
+  <div class="mobile-hud" aria-hidden="true">
+    <img class="mobile-hud-logo" src="icon.svg" alt="">
+    <span class="mobile-hud-title">Pose Lab</span>
+    <span class="mobile-hud-mode">Anatomia 3D</span>
+  </div>
+
+  <div id="viewport">
+    <div id="canvas-container"></div>
+  </div>
+
+  <div id="loading">Carregando esqueleto...</div>
+
+  <aside id="ui">
+    <button id="panel-toggle" class="sheet-toggle" type="button" aria-expanded="false" aria-controls="panel-body">
+      <span class="sheet-handle"></span>
+      <span class="sheet-title">Controles de movimento</span>
+      <span class="sheet-count">46 ajustes</span>
+      <span class="sheet-chevron" aria-hidden="true"></span>
+    </button>
+
+    <div id="panel-body" class="panel-scroll">
+      <div class="brand">
+        <div class="brand-identity">
+          <img class="brand-logo" src="icon.svg" alt="Logo do Pose Lab">
+          <div>
+            <div class="eyebrow">Pose Lab</div>
+            <h1>Esqueleto 3D</h1>
+            <p class="meta">Explore uma anatomia óssea humana real e articule o corpo com os controles.</p>
+          </div>
+        </div>
+        <div class="badge">Biomecânico</div>
+      </div>
+
+      <div class="actions">
+      <button id="reset-pose" type="button" class="primary">Pose neutra</button>
+      <button id="center-camera" type="button">Centralizar</button>
+      <button id="fullscreen" type="button">Tela cheia</button>
+      </div>
+
+      <div class="quick-hints">
+      <div class="quick-hint">Arraste para orbitar</div>
+      <div class="quick-hint">Pinça/scroll para zoom</div>
+      <div class="quick-hint">Limites anatômicos</div>
+      </div>
+
+      <div id="controls"></div>
+      <div class="status" id="status">Aguardando carregar o modelo...</div>
+      <p class="status">
+        Modelo: <a href="https://github.com/Z-Anatomy/Models-of-human-anatomy" target="_blank" rel="noreferrer">Z-Anatomy / BodyParts3D</a>,
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.
+      </p>
+      <p class="status">Movimentos e amplitudes são aproximações biomecânicas educacionais e não substituem avaliação clínica.</p>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      let refreshing = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (refreshing) return;
+        refreshing = true;
+        window.location.reload();
+      });
+
+      window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('service-worker.js', { updateViaCache: 'none' })
+          .then((registration) => registration.update())
+          .catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
