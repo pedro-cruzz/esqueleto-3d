@@ -16,10 +16,13 @@ oferece controles para tronco, cabeça, braços, mãos, dedos, pernas e pés.
 ## Recursos
 
 - Modelo anatômico humano com 278 estruturas identificadas.
-- 46 controles de movimento organizados por região corporal.
+- 61 controles de movimento organizados por região corporal.
 - Movimentação individual dos cinco dedos de cada mão.
 - Movimentação individual dos cinco dedos de cada pé.
 - Acoplamento escapuloumeral durante a elevação dos braços.
+- Inclinação pélvica em cadeia fechada, sem arrastar os fêmures.
+- Flexão segmentada da coluna entre as regiões lombar e torácicas.
+- Cotovelos e joelhos protegidos contra hiperextensão pelos controles.
 - Acompanhamento aproximado da patela durante a flexão dos joelhos.
 - Limites articulares aproximados para evitar poses extremas.
 - Câmera orbital com rotação, zoom e centralização.

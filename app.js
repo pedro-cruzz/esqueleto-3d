@@ -31,20 +31,29 @@ function control(section, id, label, axis, direction, min, max, candidate) {
   };
 }
 
-// Amplitudes aproximadas em graus para uma pessoa adulta sem lesão articular.
+// Amplitudes funcionais aproximadas em graus para uma pessoa adulta sem lesão
+// articular. Articulações em dobradiça não recebem valores negativos para
+// impedir hiperextensões impossíveis (cotovelo e joelho).
 const CONTROL_DEFS = [
-  control('Corpo', 'hips', 'Inclinação da Pelve', 'x', 1, -15, 15, 'Hips'),
-  control('Corpo', 'spine', 'Flexão Lombar', 'x', 1, -20, 35, 'Spine'),
-  control('Corpo', 'spine1', 'Inclinação do Tronco', 'z', 1, -20, 20, 'Spine1'),
-  control('Corpo', 'spine2', 'Rotação do Peito', 'y', 1, -35, 35, 'Spine2'),
-  control('Corpo', 'neck', 'Rotação do Pescoço', 'y', 1, -50, 50, 'Neck'),
-  control('Corpo', 'head', 'Flexão da Cabeça', 'x', 1, -30, 40, 'Head'),
+  control('Corpo', 'hips', 'Pelve: frente / trás', 'x', 1, -12, 15, 'Hips'),
+  control('Corpo', 'hipsLateral', 'Pelve: inclinação lateral', 'z', 1, -12, 12, 'Hips'),
+  control('Corpo', 'hipsRotation', 'Pelve: rotação', 'y', 1, -15, 15, 'Hips'),
+  control('Corpo', 'spine', 'Coluna: flexão / extensão', 'x', 1, -30, 60, 'Spine'),
+  control('Corpo', 'spineLateral', 'Coluna: inclinação lateral', 'z', 1, -35, 35, 'Spine'),
+  control('Corpo', 'spineRotation', 'Coluna: rotação', 'y', 1, -40, 40, 'Spine'),
+  control('Corpo', 'neck', 'Pescoço: rotação', 'y', 1, -70, 70, 'Neck'),
+  control('Corpo', 'neckLateral', 'Pescoço: inclinação lateral', 'z', 1, -35, 35, 'Neck'),
+  control('Corpo', 'head', 'Cabeça: flexão / extensão', 'x', 1, -45, 50, 'Head'),
 
   control('Braço Direito', 'rightShoulder', 'Elevação Escapular', 'z', -1, -10, 20, 'RightShoulder'),
+  control('Braço Direito', 'rightShoulderProtraction', 'Escápula: retrair / avançar', 'y', 1, -15, 25, 'RightShoulder'),
   control('Braço Direito', 'rightArm', 'Ombro: Frente / Trás', 'x', -1, -40, 150, 'RightArm'),
   control('Braço Direito', 'rightArmAbduction', 'Ombro: Abrir', 'z', -1, 0, 180, 'RightArmAbduction'),
-  control('Braço Direito', 'rightForeArm', 'Flexão do Cotovelo', 'x', 1, 0, 145, 'RightForeArm'),
-  control('Braço Direito', 'rightHand', 'Flexão do Punho', 'x', 1, -70, 80, 'RightHand'),
+  control('Braço Direito', 'rightArmRotation', 'Ombro: rotação', 'y', 1, -60, 70, 'RightArmAbduction'),
+  control('Braço Direito', 'rightForeArm', 'Flexão do Cotovelo', 'x', -1, 0, 145, 'RightForeArm'),
+  control('Braço Direito', 'rightForeArmRotation', 'Antebraço: supinar / pronar', 'y', 1, -80, 80, 'RightForeArm'),
+  control('Braço Direito', 'rightHand', 'Punho: flexão / extensão', 'x', -1, -70, 80, 'RightHand'),
+  control('Braço Direito', 'rightHandDeviation', 'Punho: desvio lateral', 'z', -1, -20, 30, 'RightHand'),
 
   control('Mão Direita', 'rightFinger1', 'Polegar', 'x', -1, 0, 70, 'RightFinger1'),
   control('Mão Direita', 'rightFinger2', 'Indicador', 'x', -1, 0, 90, 'RightFinger2'),
@@ -53,10 +62,14 @@ const CONTROL_DEFS = [
   control('Mão Direita', 'rightFinger5', 'Mínimo', 'x', -1, 0, 90, 'RightFinger5'),
 
   control('Braço Esquerdo', 'leftShoulder', 'Elevação Escapular', 'z', 1, -10, 20, 'LeftShoulder'),
+  control('Braço Esquerdo', 'leftShoulderProtraction', 'Escápula: retrair / avançar', 'y', -1, -15, 25, 'LeftShoulder'),
   control('Braço Esquerdo', 'leftArm', 'Ombro: Frente / Trás', 'x', -1, -40, 150, 'LeftArm'),
   control('Braço Esquerdo', 'leftArmAbduction', 'Ombro: Abrir', 'z', 1, 0, 180, 'LeftArmAbduction'),
-  control('Braço Esquerdo', 'leftForeArm', 'Flexão do Cotovelo', 'x', 1, 0, 145, 'LeftForeArm'),
-  control('Braço Esquerdo', 'leftHand', 'Flexão do Punho', 'x', 1, -70, 80, 'LeftHand'),
+  control('Braço Esquerdo', 'leftArmRotation', 'Ombro: rotação', 'y', -1, -60, 70, 'LeftArmAbduction'),
+  control('Braço Esquerdo', 'leftForeArm', 'Flexão do Cotovelo', 'x', -1, 0, 145, 'LeftForeArm'),
+  control('Braço Esquerdo', 'leftForeArmRotation', 'Antebraço: supinar / pronar', 'y', -1, -80, 80, 'LeftForeArm'),
+  control('Braço Esquerdo', 'leftHand', 'Punho: flexão / extensão', 'x', -1, -70, 80, 'LeftHand'),
+  control('Braço Esquerdo', 'leftHandDeviation', 'Punho: desvio lateral', 'z', 1, -20, 30, 'LeftHand'),
 
   control('Mão Esquerda', 'leftFinger1', 'Polegar', 'x', -1, 0, 70, 'LeftFinger1'),
   control('Mão Esquerda', 'leftFinger2', 'Indicador', 'x', -1, 0, 90, 'LeftFinger2'),
@@ -66,8 +79,10 @@ const CONTROL_DEFS = [
 
   control('Perna Direita', 'rightUpLeg', 'Quadril: Frente / Trás', 'x', -1, -20, 120, 'RightUpLeg'),
   control('Perna Direita', 'rightUpLegAbduction', 'Quadril: Abrir', 'z', -1, -20, 45, 'RightUpLegAbduction'),
+  control('Perna Direita', 'rightUpLegRotation', 'Quadril: rotação', 'y', 1, -45, 35, 'RightUpLegAbduction'),
   control('Perna Direita', 'rightLeg', 'Flexão do Joelho', 'x', 1, 0, 135, 'RightLeg'),
-  control('Perna Direita', 'rightFoot', 'Flexão do Tornozelo', 'x', 1, -20, 50, 'RightFoot'),
+  control('Perna Direita', 'rightFoot', 'Tornozelo: dorsi / plantar', 'x', 1, -20, 45, 'RightFoot'),
+  control('Perna Direita', 'rightFootInversion', 'Tornozelo: eversão / inversão', 'z', 1, -15, 30, 'RightFoot'),
   control('Perna Direita', 'rightToeBase', 'Flexão dos Dedos', 'x', 1, -30, 45, 'RightToeBase'),
 
   control('Pé Direito', 'rightToe1', 'Hálux', 'x', 1, -30, 45, 'RightToe1'),
@@ -78,8 +93,10 @@ const CONTROL_DEFS = [
 
   control('Perna Esquerda', 'leftUpLeg', 'Quadril: Frente / Trás', 'x', -1, -20, 120, 'LeftUpLeg'),
   control('Perna Esquerda', 'leftUpLegAbduction', 'Quadril: Abrir', 'z', 1, -20, 45, 'LeftUpLegAbduction'),
+  control('Perna Esquerda', 'leftUpLegRotation', 'Quadril: rotação', 'y', -1, -45, 35, 'LeftUpLegAbduction'),
   control('Perna Esquerda', 'leftLeg', 'Flexão do Joelho', 'x', 1, 0, 135, 'LeftLeg'),
-  control('Perna Esquerda', 'leftFoot', 'Flexão do Tornozelo', 'x', 1, -20, 50, 'LeftFoot'),
+  control('Perna Esquerda', 'leftFoot', 'Tornozelo: dorsi / plantar', 'x', 1, -20, 45, 'LeftFoot'),
+  control('Perna Esquerda', 'leftFootInversion', 'Tornozelo: eversão / inversão', 'z', -1, -15, 30, 'LeftFoot'),
   control('Perna Esquerda', 'leftToeBase', 'Flexão dos Dedos', 'x', 1, -30, 45, 'LeftToeBase'),
 
   control('Pé Esquerdo', 'leftToe1', 'Hálux', 'x', 1, -30, 45, 'LeftToe1'),
@@ -391,9 +408,13 @@ function buildAnatomicalRig(model) {
     ['Sternal end'],
     new THREE.Vector3(-0.03, 1.425, 0.04)
   );
+  const pelvicCenter = rightHip.clone().add(mirrorJoint(rightHip)).multiplyScalar(0.5);
 
   const pivots = {
-    hips: createPivot(model, 'Hips', new THREE.Vector3(0, 0.9, -0.02)),
+    // A pelve gira ao redor do eixo que une as cabeças femorais. As pernas
+    // permanecem ligadas ao modelo (e não à pelve), simulando a inclinação
+    // pélvica em cadeia fechada, com os pés apoiados.
+    hips: createPivot(model, 'Hips', pelvicCenter),
     spine: createPivot(model, 'Spine', new THREE.Vector3(0, 0.98, -0.03)),
     spine1: createPivot(model, 'Spine1', new THREE.Vector3(0, 1.12, -0.04)),
     spine2: createPivot(model, 'Spine2', new THREE.Vector3(0, 1.3, -0.04)),
@@ -436,7 +457,8 @@ function buildAnatomicalRig(model) {
     attachKeepingWorld(pivots[`${side}Arm`], pivots[`${side}ArmAbduction`]);
     attachKeepingWorld(pivots[`${side}ArmAbduction`], pivots[`${side}ForeArm`]);
     attachKeepingWorld(pivots[`${side}ForeArm`], pivots[`${side}Hand`]);
-    attachKeepingWorld(pivots.hips, pivots[`${side}UpLeg`]);
+    // UpLeg continua como filho direto do modelo. Se fosse filho de Hips, a
+    // pelve arrastaria o fêmur e todo o corpo giraria como uma peça rígida.
     attachKeepingWorld(pivots[`${side}UpLeg`], pivots[`${side}UpLegAbduction`]);
     attachKeepingWorld(pivots[`${side}UpLegAbduction`], pivots[`${side}Leg`]);
     attachKeepingWorld(pivots[`${side}UpLegAbduction`], pivots[`${side}Patella`]);
@@ -630,6 +652,34 @@ function rotatePivot(pivot, axis, degrees) {
   );
 }
 
+// A coluna humana não dobra em uma única vértebra. Cada controle distribui o
+// arco entre a região lombar e duas regiões torácicas, preservando uma curva
+// contínua em vez de criar uma quebra rígida no tronco.
+const SPINE_COUPLING = {
+  spine: [0.45, 0.3, 0.25],
+  spineLateral: [0.35, 0.35, 0.3],
+  spineRotation: [0.2, 0.35, 0.45],
+};
+
+function applySpinalMotion(state, rawDegrees) {
+  const weights = SPINE_COUPLING[state.def.id];
+  if (!weights) return false;
+
+  const direction = state.def.direction;
+  applyRotation(state, rawDegrees * weights[0]);
+  rotatePivot(
+    boneByName.get(canonicalBoneName('Spine1')),
+    state.def.axis,
+    rawDegrees * weights[1] * direction
+  );
+  rotatePivot(
+    boneByName.get(canonicalBoneName('Spine2')),
+    state.def.axis,
+    rawDegrees * weights[2] * direction
+  );
+  return true;
+}
+
 function applyFingerCurl(state, rawDegrees) {
   const match = state.def.id.match(/^(right|left)Finger([1-5])$/);
   if (!match) return false;
@@ -700,6 +750,7 @@ function applyPose() {
 
     if (applyFingerCurl(state, rawDegrees)) return;
     if (applyToeCurl(state, rawDegrees)) return;
+    if (applySpinalMotion(state, rawDegrees)) return;
 
     if (def.id === 'rightArmAbduction' || def.id === 'leftArmAbduction') {
       const side = def.id.startsWith('right') ? 'right' : 'left';
@@ -711,6 +762,17 @@ function applyPose() {
 
     applyRotation(state, jointDegrees);
   });
+
+  // A inclinação pélvica é acompanhada por uma pequena compensação lombar.
+  // Ela mantém o tórax estável sem esconder a rotação real da pelve.
+  const pelvicTilt = controlState.get('hips');
+  if (pelvicTilt) {
+    rotatePivot(
+      boneByName.get(canonicalBoneName('Spine')),
+      'x',
+      -parseFloat(pelvicTilt.input.value) * 0.2
+    );
+  }
 
   ['right', 'left'].forEach((side) => {
     const shoulder = controlState.get(`${side}Shoulder`);

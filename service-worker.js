@@ -1,4 +1,4 @@
-const CACHE_NAME = 'esqueleto-3d-v18';
+const CACHE_NAME = 'esqueleto-3d-v19';
 const CORE_ASSETS = [
   './',
   './index.html',
