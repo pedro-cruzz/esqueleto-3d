@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pose Lab | Sistema esquelético</title>
+  <meta name="theme-color" content="#10181e">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Pose Lab, início"><img src="icon.svg" alt=""><span>Pose Lab<small>ATLAS DE ANATOMIA</small></span></a>
+    <div class="breadcrumb">Biblioteca humana <span>/</span> <strong>Sistema esquelético</strong></div>
+    <a class="menu-return" href="./">← Menu principal</a>
+  </header>
+  <main id="viewport" aria-label="Visualizador anatômico 3D">
+    <div id="canvas-container"></div>
+    <div class="scene-heading"><span class="eyebrow">EXPLORAR EM 3D</span><h1>Sistema esquelético</h1><p id="scene-summary">Preparando estruturas anatômicas…</p></div>
+    <div id="bone-label" hidden></div>
+    <section id="specimen-gallery" hidden aria-label="Lista de peças separadas">
+      <header class="gallery-heading"><span class="eyebrow">ESTUDO POR ESTRUTURA</span><h1>Peças separadas</h1><p><span id="gallery-count">Preparando peças…</span> · Uma estrutura por cartão</p><p>Selecione uma peça para girar, ampliar e estudar em 3D. As prévias usam escalas diferentes.</p></header>
+      <p id="gallery-empty" hidden>Nenhuma peça corresponde aos filtros. Limpe a busca ou escolha outra região.</p>
+      <div id="specimen-list"></div>
+    </section>
+    <div id="scene-empty" hidden role="status">Nenhuma estrutura visível. Ajuste os filtros ou restaure a visualização.</div>
+    <div class="view-tools" aria-label="Vistas anatômicas">
+      <button data-view="front" type="button">Anterior</button><button data-view="back" type="button">Posterior</button><button data-view="right" type="button">Lateral D</button><button data-view="left" type="button">Lateral E</button>
+    </div>
+    <div class="scene-help">Arraste para girar <span>·</span> Scroll ou pinça para ampliar <span>·</span> Toque para identificar</div>
+  </main>
+  <div id="loading" role="status">Carregando esqueleto…</div>
+  <aside id="ui" aria-label="Menu de estudo">
+    <button id="panel-toggle" class="sheet-toggle" type="button" aria-expanded="false" aria-controls="panel-body"><span class="sheet-handle"></span><span>Menu de estudo</span><span class="sheet-count">61 ajustes</span><span aria-hidden="true">⌃</span></button>
+    <div id="panel-body" class="panel-scroll">
+      <div class="menu-heading"><span class="eyebrow">SEU LABORATÓRIO</span><h2>Explore a anatomia.</h2></div>
+      <nav class="tabs" aria-label="Ferramentas de estudo"><button data-tab="explore" aria-pressed="true">Explorar</button><button data-tab="motion" aria-pressed="false">Movimentar</button><button data-tab="systems" aria-pressed="false">Sistemas</button></nav>
+      <section id="tab-explore">
+        <div class="display-modes" aria-label="Modo de visualização"><button id="mode-model" aria-pressed="true">Corpo em 3D</button><button id="mode-gallery" aria-pressed="false" disabled>Lista de peças</button></div>
+        <label class="search-label" for="bone-search">Buscar estrutura</label>
+        <div class="search-wrap"><span aria-hidden="true">⌕</span><input id="bone-search" type="search" placeholder="Ex.: fêmur, escápula, C1…" autocomplete="off"></div>
+        <div class="filter-row"><label>Região<select id="region-filter"><option value="all">Todas as regiões</option></select></label><label>Lado<select id="side-filter"><option value="all">Todos</option><option value="right">Direito</option><option value="left">Esquerdo</option><option value="midline">Mediano</option></select></label></div>
+        <label class="kind-label" for="kind-filter">Tipo de estrutura<select id="kind-filter"><option value="all">Todas as estruturas</option><option value="Estrutura óssea">Somente ossos e partes ósseas</option><option value="Cartilagem">Cartilagens</option><option value="Dente">Dentes</option><option value="Cavidade">Cavidades</option></select></label>
+        <p class="filter-hint">A busca e os filtros também alteram o que aparece em 3D.</p>
+        <button id="clear-filters" class="subtle full" disabled>Mostrar todas as estruturas</button>
+        <div class="study-tools">
+          <div class="tool-heading"><label for="explode">Separar estruturas</label><output id="explode-value" for="explode">0%</output></div>
+          <input id="explode" type="range" min="0" max="100" value="0" disabled>
+          <p>Afaste as peças com espaço entre elas. Para vê-las uma a uma, use Lista de peças.</p>
+          <label class="check-row"><input id="show-label" type="checkbox" checked> Nome na seleção e ao apontar</label>
+          <label class="check-row"><input id="context-mode" type="checkbox"> Atenuar estruturas ao redor</label>
+          <button id="restore-study" class="subtle full" disabled>Restaurar visualização</button>
+        </div>
+        <div id="mobile-inspector"></div>
+        <div class="list-heading"><h3>Estruturas</h3><span id="result-count" role="status">Carregando…</span></div>
+        <div id="bone-list" aria-label="Lista de estruturas"></div>
+      </section>
+      <section id="tab-motion" hidden><div class="section-intro"><h3>Estude o movimento</h3><p>Abra uma região e ajuste as articulações. Os valores são aproximações biomecânicas.</p></div><button id="reset-pose" class="primary full">Restaurar pose neutra</button><div id="controls"></div></section>
+      <section id="tab-systems" hidden><div class="section-intro"><a class="systems-menu-link" href="./#systems">← Escolher outro sistema no menu</a><h3>Uma visão integrada do corpo</h3><p>O atlas começa pelos ossos. Os próximos sistemas serão adicionados como novas camadas de estudo.</p></div><div id="system-list"></div><p class="note">Os módulos planejados ainda não possuem modelos ou conteúdo de estudo disponíveis.</p></section>
+      <div class="panel-footer"><span id="status" role="status">Aguardando o modelo…</span><a href="THIRD_PARTY_NOTICES.md" target="_blank" rel="noreferrer">Modelo Z-Anatomy / BodyParts3D · CC BY-SA 4.0 ↗</a></div>
+    </div>
+  </aside>
+  <div id="inspector-dock"><aside id="inspector" aria-label="Detalhes da estrutura">
+    <div class="inspector-top"><span class="eyebrow">FICHA DA ESTRUTURA</span><button id="clear-selection" class="icon-button" aria-label="Limpar seleção" disabled>×</button></div>
+    <div id="selection-empty"><div class="selection-symbol" aria-hidden="true">◎</div><h2>Cada estrutura,<br>uma descoberta.</h2><p>Selecione uma peça no modelo ou encontre seu nome na lista para começar.</p><div class="mini-rule"></div><span class="eyebrow">OBSERVE · ISOLE · EXPLORE</span></div>
+    <div id="selection-details" hidden><span id="detail-kind" class="pill"></span><h2 id="detail-name"></h2><p id="detail-original"></p><dl><div><dt>Região</dt><dd id="detail-region"></dd></div><div><dt>Lateralidade</dt><dd id="detail-side"></dd></div><div><dt>Visibilidade</dt><dd id="detail-visibility"></dd></div></dl><div class="detail-actions"><button id="focus-bone" class="primary">Focar estrutura</button><button id="isolate-bone" aria-pressed="false">Isolar estrutura</button><button id="isolate-region">Ver só esta região</button><button id="hide-bone">Ocultar estrutura</button></div><label class="tool-heading" for="separate-bone">Afastar esta estrutura <output id="separate-value" for="separate-bone">0%</output></label><input id="separate-bone" type="range" min="0" max="100" value="0"><p class="note">Direita e esquerda referem-se ao corpo representado.</p></div>
+    <div class="inspector-foot"><span class="eyebrow">SOBRE ESTE ATLAS</span><p>Modelo educacional em evolução. Inclui ossos, partes ósseas, dentes e cartilagens; o total de peças não é uma contagem de ossos.</p></div>
+  </aside></div>
+  <footer class="bottom-bar"><span><i></i> <span id="visible-count">Preparando atlas</span></span><div><button id="center-camera">Centralizar</button><button id="fullscreen">Tela cheia ↗</button></div></footer>
+  <script>
+    window.addEventListener('error', () => {
+      if (!window.THREE) {
+        document.getElementById('loading').textContent = 'Não foi possível carregar a biblioteca 3D. Verifique sua conexão e recarregue a página.';
+        document.getElementById('status').textContent = 'Biblioteca 3D indisponível.';
+      }
+    });
+  </script>
+  <script src="systems.js"></script><script src="anatomy-catalog.js"></script><script src="study-logic.js"></script><script src="specimen-gallery.js"></script><script src="study.js"></script><script src="app.js"></script>
+  <script src="register-sw.js"></script>
+</body>
+</html>

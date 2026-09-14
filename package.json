@@ -1,0 +1,11 @@
+{
+  "name": "pose-lab-atlas-anatomia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Atlas de anatomia 3D para estudo do sistema esquelético.",
+  "scripts": {
+    "start": "node scripts/server.mjs",
+    "dev": "npm start",
+    "test": "node --test tests/*.test.cjs"
+  }
+}

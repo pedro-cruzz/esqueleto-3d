@@ -1,8 +1,18 @@
-const CACHE_NAME = 'esqueleto-3d-v19';
+const CACHE_NAME = 'esqueleto-3d-v22';
 const CORE_ASSETS = [
   './',
   './index.html',
+  './atlas.html',
+  './menu.css',
+  './menu.js',
+  './systems.js',
+  './register-sw.js',
   './app.js',
+  './styles.css',
+  './study.js',
+  './study-logic.js',
+  './specimen-gallery.js',
+  './anatomy-catalog.js',
   './manifest.json',
   './icon.svg',
   './esqueleto-anatomico.glb',
@@ -33,7 +43,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   const shouldRefresh =
     event.request.mode === 'navigate' ||
-    (url.origin === self.location.origin && /\.(?:html|js|json)$/.test(url.pathname));
+    (url.origin === self.location.origin && /\.(?:html|js|json|css)$/.test(url.pathname));
 
   if (shouldRefresh) {
     event.respondWith(
@@ -43,7 +53,15 @@ self.addEventListener('fetch', (event) => {
           caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
           return response;
         })
-        .catch(() => caches.match(event.request).then((cached) => cached || caches.match('./index.html')))
+        .catch(async () => {
+          const cached = await caches.match(event.request);
+          if (cached) return cached;
+          if (event.request.mode === 'navigate') {
+            const page = url.pathname.endsWith('/atlas.html') ? './atlas.html' : './index.html';
+            return (await caches.match(page)) || Response.error();
+          }
+          return Response.error();
+        })
     );
     return;
   }

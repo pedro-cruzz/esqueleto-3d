@@ -1,12 +1,12 @@
 {
-  "name": "Pose Lab | Esqueleto 3D",
+  "name": "Pose Lab | Atlas de anatomia",
   "short_name": "Pose Lab",
-  "description": "App para posar um esqueleto 3D com controles por osso.",
+  "description": "Atlas 3D para identificar, separar e estudar estruturas anatômicas e explorar movimentos.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#05070a",
-  "theme_color": "#0a0f16",
+  "background_color": "#10181e",
+  "theme_color": "#10181e",
   "icons": [
     {
       "src": "icon.svg",

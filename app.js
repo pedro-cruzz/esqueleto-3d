@@ -555,11 +555,10 @@ function buildUI() {
       sectionControls.className = 'section-controls';
       sectionControls.id = sectionId;
 
-      const collapsed = mobileMedia.matches && sections.size > 0;
+      const collapsed = sections.size > 0;
       section.classList.toggle('is-collapsed', collapsed);
       sectionToggle.setAttribute('aria-expanded', String(!collapsed));
       sectionToggle.addEventListener('click', () => {
-        if (!mobileMedia.matches) return;
         const shouldCollapse = !section.classList.contains('is-collapsed');
         section.classList.toggle('is-collapsed', shouldCollapse);
         sectionToggle.setAttribute('aria-expanded', String(!shouldCollapse));
@@ -588,14 +587,7 @@ function buildUI() {
 
   const syncSections = () => {
     sections.forEach(({ section, sectionToggle }) => {
-      if (!mobileMedia.matches) {
-        sectionToggle.setAttribute('aria-expanded', 'true');
-      } else {
-        sectionToggle.setAttribute(
-          'aria-expanded',
-          String(!section.classList.contains('is-collapsed'))
-        );
-      }
+      sectionToggle.setAttribute('aria-expanded', String(!section.classList.contains('is-collapsed')));
     });
   };
 
@@ -844,22 +836,32 @@ function centerCamera() {
   orbitControls.update();
 }
 
+function visibleModelBounds(model) {
+  const box = new THREE.Box3();
+  model.traverseVisible((node) => {
+    if (!node.isMesh) return;
+    node.geometry.computeBoundingBox();
+    box.union(node.geometry.boundingBox.clone().applyMatrix4(node.matrixWorld));
+  });
+  return box;
+}
+
 function frameModel(model) {
   model.updateMatrixWorld(true);
 
-  const initialBox = new THREE.Box3().setFromObject(model);
+  const initialBox = visibleModelBounds(model);
   const initialCenter = initialBox.getCenter(new THREE.Vector3());
   model.position.x -= initialCenter.x;
   model.position.y -= initialBox.min.y;
   model.position.z -= initialCenter.z;
   model.updateMatrixWorld(true);
 
-  const box = new THREE.Box3().setFromObject(model);
+  const box = visibleModelBounds(model);
   const size = box.getSize(new THREE.Vector3());
   const center = box.getCenter(new THREE.Vector3());
   const maxDimension = Math.max(size.x, size.y, size.z);
   const verticalFov = THREE.MathUtils.degToRad(camera.fov);
-  const distance = (maxDimension / (2 * Math.tan(verticalFov / 2))) * 1.35;
+  const distance = (Math.max(size.y, size.x / camera.aspect) / (2 * Math.tan(verticalFov / 2))) * 1.5;
 
   orbitHome = new THREE.Vector3(center.x, box.min.y + size.y * 0.52, center.z);
   cameraHome = new THREE.Vector3(
@@ -868,7 +870,7 @@ function frameModel(model) {
     orbitHome.z + distance
   );
 
-  camera.near = Math.max(maxDimension / 1000, 0.01);
+  camera.near = Math.max(maxDimension / 10000, 0.001);
   camera.far = Math.max(maxDimension * 20, 100);
   camera.updateProjectionMatrix();
   centerCamera();
@@ -877,8 +879,8 @@ function frameModel(model) {
 function initScene() {
   const compactRendering = mobileMedia.matches || coarsePointerMedia.matches;
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x090c12);
-  scene.fog = new THREE.Fog(0x090c12, 5, 14);
+  scene.background = new THREE.Color(0x10181e);
+  scene.fog = new THREE.Fog(0x10181e, 5, 14);
 
   camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.set(0, 1.45, 3.0);
@@ -926,13 +928,7 @@ function initScene() {
 
   const floor = new THREE.Mesh(
     new THREE.CircleGeometry(5.5, 48),
-    new THREE.MeshStandardMaterial({
-      color: 0x0d1118,
-      roughness: 1,
-      metalness: 0,
-      transparent: true,
-      opacity: 0.95,
-    })
+    new THREE.ShadowMaterial({ opacity: 0.18, depthWrite: false })
   );
   floor.rotation.x = -Math.PI / 2;
   floor.position.y = -0.02;
@@ -978,8 +974,9 @@ function loadModel() {
 
       frameModel(model);
       bindBones();
+      AnatomyStudy.init({ model, camera, renderer, orbitControls, centerCamera });
       if (anatomicalMeshCount > 0) {
-        setStatus(`Pronto. ${anatomicalMeshCount} estruturas anatômicas conectadas aos controles.`);
+        setStatus(`Pronto. ${CONTROL_DEFS.length} controles de movimento conectados.`);
       }
       updateLoading('Modelo carregado.');
       setTimeout(() => {
@@ -1006,14 +1003,15 @@ function loadModel() {
 
 function animate() {
   requestAnimationFrame(animate);
-  if (document.hidden) return;
+  if (document.hidden || AnatomyStudy.isGallery()) return;
   orbitControls.update();
   renderer.render(scene, camera);
+  AnatomyStudy.update();
 }
 
 function attachActions() {
   resetBtn.addEventListener('click', resetPose);
-  centerBtn.addEventListener('click', centerCamera);
+  centerBtn.addEventListener('click', () => AnatomyStudy.centerView());
   fullscreenBtn.addEventListener('click', async () => {
     try {
       if (!document.fullscreenElement) {
@@ -1118,4 +1116,10 @@ function start() {
   animate();
 }
 
-start();
+try {
+  start();
+} catch (error) {
+  console.error('Falha ao iniciar o visualizador:', error);
+  updateLoading('Não foi possível iniciar o visualizador 3D. Verifique a conexão e o suporte a WebGL e recarregue a página.');
+  setStatus('Visualizador indisponível.');
+}

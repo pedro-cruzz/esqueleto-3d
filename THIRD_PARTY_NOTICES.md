@@ -9,5 +9,6 @@ Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
 - License: https://creativecommons.org/licenses/by-sa/4.0/
 
 Changes made by this application are limited to runtime grouping, materials,
-lighting, and articulation pivots. Redistributions of the model or adaptations
+lighting, articulation pivots, visibility, highlighting, and schematic separation
+of structures. The source GLB is unchanged. Redistributions of the model or adaptations
 must preserve attribution and the CC BY-SA 4.0 terms.
