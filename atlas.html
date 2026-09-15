@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Pose Lab | Sistema esquelético</title>
+  <title>Pose Lab | Atlas anatômico</title>
   <meta name="theme-color" content="#10181e">
   <link rel="manifest" href="public/manifest.json">
   <link rel="icon" href="public/icon.svg" type="image/svg+xml">
@@ -16,12 +16,12 @@
 <body>
   <header class="topbar">
     <a class="brand" href="./" aria-label="Pose Lab, início"><img src="public/icon.svg" alt=""><span>Pose Lab<small>ATLAS DE ANATOMIA</small></span></a>
-    <div class="breadcrumb">Biblioteca humana <span>/</span> <strong>Sistema esquelético</strong></div>
+    <div class="breadcrumb">Biblioteca humana <span>/</span> <strong>Sistema anatômico</strong></div>
     <a class="menu-return" href="./">← Menu principal</a>
   </header>
   <main id="viewport" aria-label="Visualizador anatômico 3D">
     <div id="canvas-container"></div>
-    <div class="scene-heading"><span class="eyebrow">EXPLORAR EM 3D</span><h1>Sistema esquelético</h1><p id="scene-summary">Preparando estruturas anatômicas…</p></div>
+    <div class="scene-heading"><span class="eyebrow">EXPLORAR EM 3D</span><h1>Sistema anatômico</h1><p id="scene-summary">Preparando estruturas anatômicas…</p></div>
     <div id="bone-label" hidden></div>
     <section id="specimen-gallery" hidden aria-label="Lista de peças separadas">
       <header class="gallery-heading"><span class="eyebrow">ESTUDO POR ESTRUTURA</span><h1>Peças separadas</h1><p><span id="gallery-count">Preparando peças…</span> · Uma estrutura por cartão</p><p>Selecione uma peça para girar, ampliar e estudar em 3D. As prévias usam escalas diferentes.</p></header>
@@ -34,7 +34,7 @@
     </div>
     <div class="scene-help">Arraste para girar <span>·</span> Scroll ou pinça para ampliar <span>·</span> Toque para identificar</div>
   </main>
-  <div id="loading" role="status">Carregando esqueleto…</div>
+  <div id="loading" role="status">Carregando modelo anatômico…</div>
   <aside id="ui" aria-label="Menu de estudo">
     <button id="panel-toggle" class="sheet-toggle" type="button" aria-expanded="false" aria-controls="panel-body"><span class="sheet-handle"></span><span>Menu de estudo</span><span class="sheet-count">61 ajustes</span><span aria-hidden="true">⌃</span></button>
     <div id="panel-body" class="panel-scroll">
@@ -43,9 +43,10 @@
       <section id="tab-explore">
         <div class="display-modes" aria-label="Modo de visualização"><button id="mode-model" aria-pressed="true">Corpo em 3D</button><button id="mode-gallery" aria-pressed="false" disabled>Lista de peças</button></div>
         <label class="search-label" for="bone-search">Buscar estrutura</label>
-        <div class="search-wrap"><span aria-hidden="true">⌕</span><input id="bone-search" type="search" placeholder="Ex.: fêmur, escápula, C1…" autocomplete="off"></div>
+        <div class="search-wrap"><span aria-hidden="true">⌕</span><input id="bone-search" type="search" placeholder="Ex.: fêmur, deltoide, C1…" autocomplete="off"></div>
+        <label class="profile-label" for="body-profile">Perfil corporal<select id="body-profile"><option value="masculine">Masculino</option><option value="feminine">Feminino</option></select></label>
         <div class="filter-row"><label>Região<select id="region-filter"><option value="all">Todas as regiões</option></select></label><label>Lado<select id="side-filter"><option value="all">Todos</option><option value="right">Direito</option><option value="left">Esquerdo</option><option value="midline">Mediano</option></select></label></div>
-        <label class="kind-label" for="kind-filter">Tipo de estrutura<select id="kind-filter"><option value="all">Todas as estruturas</option><option value="Estrutura óssea">Somente ossos e partes ósseas</option><option value="Cartilagem">Cartilagens</option><option value="Dente">Dentes</option><option value="Cavidade">Cavidades</option></select></label>
+        <label class="kind-label" for="kind-filter">Tipo de estrutura<select id="kind-filter"><option value="all">Todas as estruturas</option><option value="Estrutura óssea">Somente ossos e partes ósseas</option><option value="Músculo">Músculos</option><option value="Tendão">Tendões</option><option value="Ligamento">Ligamentos</option><option value="Aponeurose">Aponeuroses</option><option value="Cartilagem">Cartilagens</option><option value="Dente">Dentes</option><option value="Cavidade">Cavidades</option></select></label>
         <p class="filter-hint">A busca e os filtros também alteram o que aparece em 3D.</p>
         <button id="clear-filters" class="subtle full" disabled>Mostrar todas as estruturas</button>
         <div class="study-tools">
@@ -61,8 +62,8 @@
         <div id="bone-list" aria-label="Lista de estruturas"></div>
       </section>
       <section id="tab-motion" hidden><div class="section-intro"><h3>Estude o movimento</h3><p>Abra uma região e ajuste as articulações. Os valores são aproximações biomecânicas.</p></div><button id="reset-pose" class="primary full">Restaurar pose neutra</button><div id="controls"></div></section>
-      <section id="tab-systems" hidden><div class="section-intro"><a class="systems-menu-link" href="./#systems">← Escolher outro sistema no menu</a><h3>Uma visão integrada do corpo</h3><p>O atlas começa pelos ossos. Os próximos sistemas serão adicionados como novas camadas de estudo.</p></div><div id="system-list"></div><p class="note">Os módulos planejados ainda não possuem modelos ou conteúdo de estudo disponíveis.</p></section>
-      <div class="panel-footer"><span id="status" role="status">Aguardando o modelo…</span><a href="THIRD_PARTY_NOTICES.md" target="_blank" rel="noreferrer">Modelo Z-Anatomy / BodyParts3D · CC BY-SA 4.0 ↗</a></div>
+      <section id="tab-systems" hidden><div class="section-intro"><a class="systems-menu-link" href="./#systems">← Escolher outro sistema no menu</a><h3>Uma visão integrada do corpo</h3><p>Alterne entre camadas anatômicas para comparar estruturas e relações do corpo humano.</p></div><div id="system-list"></div><p class="note">Os módulos ainda em preparação serão ativados quando seus modelos e conteúdos de estudo forem integrados.</p></section>
+      <div class="panel-footer"><span id="status" role="status">Aguardando o modelo…</span><a href="THIRD_PARTY_NOTICES.md" target="_blank" rel="noreferrer">Modelos Z-Anatomy / BodyParts3D · CC BY-SA 4.0 ↗</a></div>
     </div>
   </aside>
   <div id="inspector-dock"><aside id="inspector" aria-label="Detalhes da estrutura">
@@ -80,7 +81,7 @@
       }
     });
   </script>
-  <script src="src/data/systems.js"></script><script src="src/data/anatomy-catalog.js"></script><script src="src/logic/study-logic.js"></script><script src="src/components/specimen-gallery.js"></script><script src="src/components/study.js"></script><script src="src/core/app.js"></script>
+  <script src="src/data/systems.js"></script><script src="src/data/body-profiles.js"></script><script src="src/data/anatomy-catalog.js"></script><script src="src/data/muscle-catalog.js"></script><script src="src/logic/study-logic.js"></script><script src="src/components/specimen-gallery.js"></script><script src="src/components/study.js"></script><script src="src/core/app.js"></script>
   <script src="src/core/register-sw.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
-const { normalize, matches, isVisible, separatedLayout } = require('../study-logic.js');
+const { normalize, matches, isVisible, separatedLayout } = require('../src/logic/study-logic.js');
 const filters = { query: '', region: 'all', side: 'all', kind: 'all' };
 const entries = [
   { id: 'femur-r', search: normalize('Fêmur direito Femur'), region: 'Membros inferiores', side: 'right', kind: 'Estrutura óssea' },

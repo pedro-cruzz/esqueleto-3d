@@ -2,10 +2,11 @@
   "name": "pose-lab-atlas-anatomia",
   "version": "1.0.0",
   "private": true,
-  "description": "Atlas de anatomia 3D para estudo do sistema esquelético.",
+  "description": "Atlas de anatomia 3D para estudo dos sistemas esquelético e muscular.",
   "scripts": {
     "start": "node scripts/server.mjs",
     "dev": "npm start",
+    "catalog:build": "python3 scripts/build-catalog.py && python3 scripts/build-muscle-catalog.py",
     "test": "node --test tests/*.test.cjs"
   }
 }

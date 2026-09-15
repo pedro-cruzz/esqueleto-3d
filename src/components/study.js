@@ -1,6 +1,7 @@
 /* Study tools operate on mesh positions; the existing joint rig remains independent. */
 window.AnatomyStudy = (() => {
   const systems = window.ANATOMY_SYSTEMS;
+  const activeSystemId = new URLSearchParams(window.location.search).get('system') || 'skeletal';
   const $ = (id) => document.getElementById(id);
   const { normalize, matches, isVisible, separatedLayout } = AnatomyStudyLogic;
   const sides = { right: 'Direito', left: 'Esquerdo', midline: 'Mediano' };
@@ -19,6 +20,13 @@ window.AnatomyStudy = (() => {
   }
   function init(context) {
     api = context;
+    const catalog = window.ANATOMY_CATALOGS?.[activeSystemId] || window.ANATOMY_CATALOG;
+    const availableKinds = activeSystemId === 'muscular'
+      ? new Set(['all', 'Músculo', 'Tendão', 'Ligamento', 'Aponeurose', 'Cartilagem'])
+      : new Set(['all', 'Estrutura óssea', 'Cartilagem', 'Dente', 'Cavidade']);
+    [...$('kind-filter').options].forEach((option) => {
+      option.hidden = !availableKinds.has(option.value);
+    });
     context.model.updateMatrixWorld(true);
     const modelBox = new THREE.Box3();
     context.model.traverseVisible(mesh => {
@@ -30,7 +38,7 @@ window.AnatomyStudy = (() => {
     context.model.traverse((mesh) => {
       if (!mesh.isMesh || !mesh.visible) return;
       const key = mesh.name.toLowerCase().replace(/[^a-z0-9]/g, '');
-      const metadata = window.ANATOMY_CATALOG[key];
+      const metadata = catalog[key];
       if (!metadata) { console.warn('Structure missing from catalog:', mesh.name); return; }
       mesh.geometry.computeBoundingBox();
       const localCenter = mesh.geometry.boundingBox.getCenter(new THREE.Vector3());
@@ -82,9 +90,9 @@ window.AnatomyStudy = (() => {
     bindEvents(); filterList(); refresh();
     const initialView = new URLSearchParams(window.location.search).get('view');
     if (initialView === 'gallery') {
-      $('kind-filter').value = 'Estrutura óssea';
+      $('kind-filter').value = activeSystemId === 'muscular' ? 'Músculo' : 'Estrutura óssea';
       applyFilters(); setMode('gallery');
-    } else if (initialView === 'motion') {
+    } else if (initialView === 'motion' && activeSystemId !== 'muscular') {
       document.querySelector('[data-tab="motion"]').click();
       if (mobileMedia.matches && !uiEl.classList.contains('is-open')) panelToggle.click();
     }
@@ -150,10 +158,10 @@ window.AnatomyStudy = (() => {
       entry.mesh.visible = isVisible(entry, currentFilters, isolated?.id);
       if (entry.mesh.visible) visibleMeshes.push(entry.mesh);
       const highlight = entry === selected;
-      if (highlight) entry.mesh.material.color.setHex(0x93d6ba);
+      if (highlight) entry.mesh.material.color.setHex(activeSystemId === 'muscular' ? 0xe6a096 : 0x93d6ba);
       else entry.mesh.material.color.copy(entry.baseColor);
-      entry.mesh.material.emissive.setHex(highlight ? 0x458d69 : 0x000000);
-      entry.mesh.material.emissiveIntensity = highlight ? 0.55 : 0;
+      entry.mesh.material.emissive.setHex(highlight ? (activeSystemId === 'muscular' ? 0x71332f : 0x458d69) : 0x000000);
+      entry.mesh.material.emissiveIntensity = highlight ? (activeSystemId === 'muscular' ? 0.22 : 0.55) : 0;
       const dim = $('context-mode').checked && selected && !highlight;
       const material = entry.mesh.material;
       const transparent = Boolean(dim || entry.transparent);

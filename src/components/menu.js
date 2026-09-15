@@ -20,7 +20,7 @@
     const description = document.createElement('p'); description.textContent = system.description;
     card.append(top, icon, title, description);
     if (system.available) {
-      const link = document.createElement('a'); link.className = 'open-system'; link.href = 'atlas.html?view=model'; link.textContent = 'Abrir sistema esquelético ↗'; card.append(link);
+      const link = document.createElement('a'); link.className = 'open-system'; link.href = `atlas.html?system=${system.id}&view=model`; link.textContent = `Abrir ${system.name.toLowerCase()} ↗`; card.append(link);
     } else {
       const note = document.createElement('span'); note.className = 'planned-label'; note.textContent = 'Modelo ainda não disponível'; card.append(note);
     }

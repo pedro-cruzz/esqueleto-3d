@@ -1940,3 +1940,5 @@ window.ANATOMY_CATALOG = {
     "kind": "Estrutura óssea"
   }
 };
+window.ANATOMY_CATALOGS = window.ANATOMY_CATALOGS || {};
+window.ANATOMY_CATALOGS.skeletal = window.ANATOMY_CATALOG;

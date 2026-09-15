@@ -1133,3 +1133,47 @@ dl div { padding: 11px 0; border-color: var(--border); }
 .radiology-console-note { margin: 10px 0 0; color: var(--subtle); font-size: 9px; line-height: 1.45; }
 .radiology-mode .scene-heading h1 { font-family: inherit; font-weight: 600; }
 @media (max-width: 720px), (max-height: 560px) and (orientation: landscape) { .radiology-console { margin: 0 0 18px; } }
+
+/* O sistema muscular usa uma apresentação de prancha anatômica: limpa,
+   clara e focada no corpo, sem alterar a sala escura do esqueleto/radiologia. */
+body.system-muscular #viewport {
+  background: var(--bg);
+}
+
+body.system-muscular .scene-heading h1,
+body.system-muscular .scene-heading p {
+  color: var(--text);
+}
+
+body.system-muscular .scene-heading .eyebrow {
+  color: var(--accent);
+}
+
+body.system-muscular .view-tools {
+  background: #181c18e8;
+  border-color: var(--border);
+  box-shadow: none;
+}
+
+body.system-muscular .view-tools button {
+  color: var(--muted);
+  background: transparent;
+  border-color: transparent;
+}
+
+body.system-muscular .view-tools button:hover {
+  color: var(--text);
+  background: var(--panel-soft);
+  border-color: var(--border);
+}
+
+body.system-muscular .scene-help {
+  color: var(--subtle);
+}
+
+body.system-muscular #bone-label {
+  color: var(--text);
+  background: #1b2a21;
+  border-color: var(--accent);
+  box-shadow: 0 6px 16px #0005;
+}

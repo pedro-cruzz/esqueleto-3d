@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="icon.svg" width="112" alt="Logo do Pose Lab">
+  <img src="public/icon.svg" width="112" alt="Logo do Pose Lab">
   <h1>Pose Lab · Atlas de anatomia</h1>
   <p>Atlas interativo para identificar, separar e explorar estruturas anatômicas em 3D.</p>
 </div>
@@ -7,9 +7,9 @@
 ## Sobre
 
 O Pose Lab é uma aplicação web de estudo de anatomia. Permite identificar,
-isolar, ocultar e separar estruturas do esqueleto humano em 3D, além de explorar
-movimentos articulares. O modelo anatômico é carregado localmente, separado em estruturas ósseas e
-conectado a um rig criado em tempo de execução pelo Three.js.
+isolar, ocultar e separar estruturas anatômicas em 3D, além de explorar
+movimentos articulares no sistema esquelético. Os modelos são carregados
+localmente e os catálogos de estudo preservam o nome original de cada malha.
 
 A interface funciona em desktop e celular, pode ser instalada como PWA e
 oferece controles para tronco, cabeça, braços, mãos, dedos, pernas e pés.
@@ -20,7 +20,7 @@ oferece controles para tronco, cabeça, braços, mãos, dedos, pernas e pés.
 - Acesso direto ao corpo em 3D, lista de ossos ou controles de movimento.
 - Navegação de volta ao menu a partir do atlas.
 
-- Catálogo de 277 peças selecionáveis com nomes em português e nomes originais em inglês.
+- Catálogo de 277 estruturas ósseas e 467 estruturas musculares/tendíneas, com nomes editoriais e nomes originais.
 - Seleção por clique/toque no modelo ou pela lista, com destaque e rótulo na cena.
 - Busca sem distinção de acentos e filtros por região, lateralidade e tipo que controlam a lista e a cena 3D.
 - Modo `Lista de peças`: prévias individuais do modelo, nomes e acesso direto ao estudo isolado em 3D.
@@ -28,7 +28,7 @@ oferece controles para tronco, cabeça, braços, mãos, dedos, pernas e pés.
 - Isolamento com enquadramento automático, visualização por região, ocultação, foco e atenuação das estruturas ao redor.
 - Separação geral e individual reversível, com espaçamento entre as caixas das peças na pose neutra, preservando os pivôs de movimento.
 - Vistas anterior, posterior e laterais direita e esquerda.
-- Menu Explorar / Movimentar / Sistemas, com expansões identificadas como planejadas.
+- Menu Explorar / Movimentar / Sistemas, com módulos disponíveis e expansões identificadas como planejadas.
 - 278 malhas no arquivo fonte: 277 peças de estudo e uma malha auxiliar oculta.
   As peças incluem partes ósseas, dentes, cartilagens e cavidades; não equivalem
   a uma contagem de ossos do corpo humano.
@@ -44,7 +44,7 @@ oferece controles para tronco, cabeça, braços, mãos, dedos, pernas e pés.
 - Câmera orbital com rotação, zoom e centralização.
 - Layout responsivo com painel inferior ou lateral no celular.
 - Instalação como Progressive Web App (PWA).
-- Modelo e decodificador Draco disponíveis localmente.
+- Modelos esquelético e muscular, além do decodificador Draco, disponíveis localmente.
 
 ## Tecnologias
 
@@ -134,15 +134,17 @@ com `Ctrl+C` quando terminar.
 ## Navegação
 
 A página inicial (`index.html`) mostra o menu e o catálogo de sistemas.
-O visualizador fica em `atlas.html`, com três acessos diretos:
+O visualizador fica em `atlas.html`, com acessos diretos:
 
-- `atlas.html?view=model`: corpo em 3D.
-- `atlas.html?view=gallery`: lista de ossos e partes ósseas.
+- `atlas.html?system=skeletal&view=model`: sistema esquelético em 3D.
+- `atlas.html?system=muscular&view=model`: sistema muscular em 3D.
+- `atlas.html?system=skeletal&view=gallery`: lista de ossos e partes ósseas.
+- `atlas.html?system=muscular&view=gallery`: lista de músculos e tendões.
 - `atlas.html?view=motion`: painel de movimentos (aberto também no celular).
 
 `Menu principal` e a marca Pose Lab voltam à tela inicial. O catálogo compartilhado
-em `systems.js` mantém os mesmos sistemas e estados no menu e no visualizador.
-Os módulos em preparação não abrem um visualizador vazio. A tela inicial não
+em `src/data/systems.js` mantém os mesmos sistemas, modelos e estados no menu e
+no visualizador. Os módulos em preparação não abrem um visualizador vazio. A tela inicial não
 inicializa WebGL; o atlas carrega suas bibliotecas ao entrar no módulo disponível.
 
 ## Controles
@@ -173,29 +175,32 @@ inicializa WebGL; o atlas carrega suas bibliotecas ao entrar no módulo disponí
 - Use `Centralizar` para restaurar a câmera.
 - Use `Tela cheia` para ampliar a área do aplicativo.
 
-## Estrutura
+## Estrutura do projeto
 
 | Caminho | Responsabilidade |
 | --- | --- |
 | `index.html` | Tela inicial com sistemas e opções de estudo. |
-| `menu.css` / `menu.js` | Estilos e cartões do menu principal. |
-| `systems.js` | Catálogo de sistemas e disponibilidade, compartilhado entre as telas. |
+| `src/styles/menu.css` / `src/components/menu.js` | Estilos e cartões do menu principal. |
+| `src/data/systems.js` | Catálogo de sistemas, modelos e estados. |
 | `atlas.html` | Interface do visualizador e carregamento das bibliotecas 3D. |
-| `register-sw.js` | Registro e atualização da PWA, compartilhado entre as telas. |
+| `src/core/register-sw.js` | Registro e atualização da PWA, compartilhado entre as telas. |
 | `scripts/server.mjs` | Servidor estático usado por `npm start`, com porta configurável. |
-| `styles.css` | Interface responsiva, painéis e visualizador. |
-| `anatomy-catalog.js` | Índice de nomes, regiões, lateralidade e tipos de estrutura. |
+| `src/styles/atlas.css` | Interface responsiva, painéis e visualizador. |
+| `src/data/anatomy-catalog.js` | Índice de nomes, regiões, lateralidade e tipos ósseos. |
+| `src/data/muscle-catalog.js` | Índice de músculos e tendões do modelo muscular. |
 | `scripts/build-catalog.py` | Gera o catálogo a partir dos nomes do GLB; falha se faltar tradução. |
-| `study.js` | Seleção, busca, ficha, visibilidade, separação e registro dos sistemas. |
-| `study-logic.js` | Regras de filtragem, visibilidade e cálculo de posições separadas. |
-| `specimen-gallery.js` | Lista de peças com prévias individuais geradas sob demanda. |
+| `scripts/build-muscle-catalog.py` | Gera o catálogo muscular a partir do GLB. |
+| `src/components/study.js` | Seleção, busca, ficha, visibilidade e separação. |
+| `src/logic/study-logic.js` | Regras de filtragem, visibilidade e cálculo de posições separadas. |
+| `src/components/specimen-gallery.js` | Lista de peças com prévias individuais geradas sob demanda. |
 | `tests/study-logic.test.cjs` | Regressão de filtros, isolamento e espaçamento entre peças. |
 | `tests/catalog.test.cjs` | Integridade do catálogo em relação ao modelo real. |
-| `app.js` | Cena 3D, rig anatômico, controles e regras de movimento. |
-| `esqueleto-anatomico.glb` | Modelo anatômico carregado pela aplicação. |
-| `draco/` | Decodificador Draco usado pelo GLTFLoader. |
-| `icon.svg` | Marca, favicon e ícone da PWA. |
-| `manifest.json` | Metadados de instalação da PWA. |
+| `tests/muscle-catalog.test.cjs` | Integridade do catálogo muscular e lateralidade. |
+| `src/core/app.js` | Cena 3D, seleção de modelo, rig esquelético e radiologia. |
+| `public/models/` | Modelos GLB do esqueleto e da musculatura. |
+| `public/draco/` | Decodificador Draco usado pelo GLTFLoader. |
+| `public/icon.svg` | Marca, favicon e ícone da PWA. |
+| `public/manifest.json` | Metadados de instalação da PWA. |
 | `service-worker.js` | Cache local dos recursos principais. |
 | `THIRD_PARTY_NOTICES.md` | Créditos e licença do modelo anatômico. |
 
@@ -249,19 +254,25 @@ de desenvolvimento, também é possível limpar os dados do site.
 
 ### O modelo não carrega
 
-- Confirme que `esqueleto-anatomico.glb` está na raiz.
-- Confirme que os três arquivos necessários existem em `draco/`.
+- Confirme que `public/models/esqueleto-anatomico.glb` existe para o sistema esquelético.
+- Confirme que `public/models/musculos.glb` existe para o sistema muscular.
+- Confirme que os três arquivos necessários existem em `public/draco/`.
 - Abra o console do navegador e procure erros de WebGL, GLTF ou rede.
 - Verifique a conexão com a internet para carregar Three.js pelas CDNs.
 
 ## Créditos e licença do modelo
 
-O arquivo `esqueleto-anatomico.glb` deriva do projeto
+O arquivo `public/models/esqueleto-anatomico.glb` deriva do projeto
 [Z-Anatomy / BodyParts3D](https://github.com/Z-Anatomy/Models-of-human-anatomy) e
 é distribuído sob a licença
 [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
-A conversão GLB usada como fonte está disponível em
+O modelo muscular `public/models/musculos.glb` usa a mesma base anatômica em uma
+seleção de músculos e tendões disponibilizada pelo projeto
+[BodyExplorer](https://github.com/JohanBellander/BodyExplorer), que documenta
+BodyParts3D e Z-Anatomy como suas fontes de dados.
+
+A conversão GLB esquelética usada como fonte está disponível em
 [Liyucheng1997/242_lab-human-anatomy](https://github.com/Liyucheng1997/242_lab-human-anatomy).
 
 Consulte [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) antes de redistribuir
@@ -280,11 +291,10 @@ catálogo e GLB, filtros de visibilidade, isolamento e separação sem sobreposi
 das caixas na pose neutra. Para atualizar o índice após alterar nomes ou trocar o modelo,
 execute `python3 scripts/build-catalog.py` e revise as traduções geradas.
 
-O catálogo `ANATOMY_SYSTEMS` em `systems.js`, exposto também por
-`AnatomyStudy.systems`, apresenta o sistema esquelético
-como disponível e músculos, sistema nervoso e órgãos como expansões planejadas.
-Esses módulos ainda não carregam modelos 3D. Sua integração requer assets com
-licença compatível, alinhamento espacial e metadados próprios.
+O catálogo `ANATOMY_SYSTEMS` em `src/data/systems.js`, exposto também por
+`AnatomyStudy.systems`, apresenta os sistemas esquelético e muscular como
+disponíveis. Sistema nervoso e órgãos continuam planejados até que recebam
+assets com licença compatível, alinhamento espacial e metadados próprios.
 
 Esta versão é uma base funcional de estudo, ainda sem validação profissional.
 As traduções editoriais preservam o nome original do modelo para rastreabilidade
