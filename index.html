@@ -6,29 +6,44 @@
   <meta name="theme-color" content="#10181e">
   <meta name="description" content="Escolha um sistema e uma forma de estudar anatomia no Pose Lab.">
   <title>Pose Lab | Menu de estudo</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="menu.css">
-  <script src="systems.js" defer></script>
-  <script src="menu.js" defer></script>
-  <script src="register-sw.js" defer></script>
+  <link rel="manifest" href="public/manifest.json">
+  <link rel="icon" href="public/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="src/styles/menu.css">
+  <script src="src/data/systems.js" defer></script>
+  <script src="src/components/menu.js" defer></script>
+  <script src="src/core/register-sw.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Ir para o conteúdo</a>
   <header class="menu-header">
-    <a class="brand" href="./" aria-label="Pose Lab, início"><img src="icon.svg" alt=""><span>Pose Lab<small>ATLAS DE ANATOMIA</small></span></a>
-    <nav aria-label="Navegação principal"><a href="#systems" aria-current="page">Sistemas</a><a href="#study-options">Opções de estudo</a></nav>
+    <a class="brand" href="./" aria-label="Pose Lab, início"><img src="public/icon.svg" alt=""><span>Pose Lab<small>ATLAS DE ANATOMIA</small></span></a>
+    <nav aria-label="Navegação principal"><a href="#systems" aria-current="page">Sistemas</a><a href="#radiology">Radiologia</a><a href="#study-options">Opções de estudo</a></nav>
     <span class="header-note">Seu laboratório de anatomia</span>
   </header>
   <main id="main" class="menu-main">
     <section class="welcome" aria-labelledby="welcome-title">
-      <div><span class="eyebrow">BIBLIOTECA HUMANA</span><h1 id="welcome-title">Por onde vamos começar?</h1><p>Escolha um sistema e explore a anatomia, uma estrutura de cada vez.</p></div>
-      <div class="availability"><span class="status-dot"></span> Sistema esquelético disponível</div>
+      <div class="welcome-copy"><span class="eyebrow">PLACA 01 · BIBLIOTECA HUMANA</span><h1 id="welcome-title">O corpo humano,<br><em>em camadas.</em></h1><p>Um laboratório visual para compreender estruturas, relações e movimentos — com precisão e espaço para observar.</p><div class="welcome-meta"><span><strong>277</strong> estruturas indexadas</span><span><strong>01</strong> sistema disponível</span></div><a class="welcome-cta" href="atlas.html?view=model">Começar pelo esqueleto <span aria-hidden="true">↗</span></a></div>
+      <div class="welcome-plate" aria-label="Prancha ilustrativa do sistema esquelético">
+        <div class="plate-header"><span>POSE LAB / ATLAS</span><span>TA · 001</span></div>
+        <div class="plate-rule"></div>
+        <svg class="plate-figure" viewBox="0 0 260 520" fill="none" aria-hidden="true">
+          <circle cx="130" cy="53" r="31" stroke="currentColor" stroke-width="1.5"/><path d="M115 64c7 8 23 8 30 0M119 49h7m8 0h7M130 84v48m-32 3c18-10 46-10 64 0M98 135c13 16 51 16 64 0M101 156c14 16 44 16 58 0M106 179c11 13 37 13 48 0M112 200c8 10 28 10 36 0M130 132v107M87 140l-25 108m111-108 25 108M62 248l-17 112m153-112 17 112M45 360l-21 103m191-103 21 103M112 238c-12 17-18 37-18 61l5 31M148 238c12 17 18 37 18 61l-5 31M99 331c11 17 51 17 62 0l-10 31c-12 8-30 8-42 0Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="62" cy="248" r="4" fill="currentColor"/><circle cx="198" cy="248" r="4" fill="currentColor"/><circle cx="45" cy="360" r="4" fill="currentColor"/><circle cx="215" cy="360" r="4" fill="currentColor"/><circle cx="24" cy="463" r="4" fill="currentColor"/><circle cx="236" cy="463" r="4" fill="currentColor"/>
+        </svg>
+        <span class="plate-axis plate-axis-top">SUPERIOR</span><span class="plate-axis plate-axis-bottom">INFERIOR</span><span class="plate-callout callout-one">01 <b>AXIAL</b></span><span class="plate-callout callout-two">02 <b>APENDICULAR</b></span>
+      </div>
     </section>
     <section id="systems" aria-labelledby="systems-title">
       <div class="section-heading"><h2 id="systems-title">Sistemas anatômicos</h2><span>01 disponível · 03 em preparação</span></div>
       <div id="systems-grid" class="systems-grid"></div>
       <noscript><p>Ative o JavaScript para visualizar o catálogo de sistemas e usar o atlas 3D.</p></noscript>
+    </section>
+    <section id="radiology" class="radiology-section" aria-labelledby="radiology-title">
+      <div class="section-heading"><h2 id="radiology-title">Radiologia</h2><span>Ferramenta independente</span></div>
+      <a class="radiology-launch" href="radiologia.html">
+        <span class="radiology-index">RX · 01</span>
+        <span class="radiology-copy"><strong>Mesa de raio X</strong><span>Estude o posicionamento da pelve AP e confira como a rotação altera os critérios de simetria.</span></span>
+        <span class="radiology-action">Abrir simulador <b aria-hidden="true">↗</b></span>
+      </a>
     </section>
     <section id="study-options" aria-labelledby="options-title">
       <div class="section-heading"><h2 id="options-title">Como você quer estudar?</h2><span>Opções do sistema esquelético</span></div>

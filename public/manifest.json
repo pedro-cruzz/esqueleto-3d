@@ -1,0 +1,17 @@
+{
+  "name": "Pose Lab | Atlas de anatomia",
+  "short_name": "Pose Lab",
+  "description": "Atlas 3D para identificar, separar e estudar estruturas anatômicas e explorar movimentos.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#10181e",
+  "theme_color": "#10181e",
+  "icons": [
+    {
+      "src": "public/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

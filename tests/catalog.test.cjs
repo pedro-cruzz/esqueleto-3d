@@ -42,3 +42,12 @@ test('similar small bones retain their anatomical region and identity', () => {
   assert.equal(catalog.proximalphalanxoffirstfingerofhandr001.region, 'Mãos');
   assert.equal(catalog.proximalphalanxoffirstfingeroffootr001.region, 'Pés');
 });
+
+test('paired hip bones use the correct anatomical name and laterality', () => {
+  assert.equal(catalog.hipboner001.name, 'Osso coxal');
+  assert.equal(catalog.hipboner001.side, 'right');
+  assert.equal(catalog.hipbonel001.name, 'Osso coxal');
+  assert.equal(catalog.hipbonel001.side, 'left');
+  assert.equal(catalog.hipboner001.region, 'Pelve');
+  assert.equal(catalog.hipbonel001.region, 'Pelve');
+});
