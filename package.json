@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node scripts/server.mjs",
     "dev": "npm start",
+    "build": "node scripts/build-static.mjs",
     "catalog:build": "python3 scripts/build-catalog.py && python3 scripts/build-muscle-catalog.py && python3 scripts/build-system-catalogs.py",
     "test": "node --test tests/*.test.cjs"
   },

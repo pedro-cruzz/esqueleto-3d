@@ -96,6 +96,32 @@ PORT=8081 npm run dev
 
 Mantenha o terminal do servidor aberto enquanto estiver usando o aplicativo.
 
+## Publicação na Vercel
+
+O arquivo `vercel.json` configura este projeto como site estático:
+
+- **Framework Preset:** Other.
+- **Root Directory:** a pasta que contém `package.json`, `index.html` e `vercel.json`
+  (a raiz do repositório neste projeto).
+- **Build Command:** `npm run build`.
+- **Output Directory:** `dist`.
+
+O build copia as páginas, `src/`, `public/`, o service worker e os créditos
+para `dist/`, preservando os caminhos dos modelos. Também verifica as referências
+locais antes de concluir. Não configure `public` como Output Directory: essa
+pasta contém recursos, enquanto a página inicial está na raiz do projeto.
+
+Para conferir localmente:
+
+```bash
+npm run build
+python3 -m http.server 8081 --bind 127.0.0.1 --directory dist
+```
+
+Envie essas alterações para a branch vinculada à Vercel e gere um novo deploy.
+Confira também `/atlas.html?system=organs&view=model` e `/radiologia.html`.
+O servidor de `npm start` é usado apenas no desenvolvimento local.
+
 ## Acessando pelo celular
 
 ### Com ngrok
