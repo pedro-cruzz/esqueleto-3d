@@ -6,3268 +6,3735 @@ window.ANATOMY_CATALOGS.muscular = {
     "original": "abdominal part of pectoralis major",
     "side": "left",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "abdominalpartofrightpectoralismajor": {
     "name": "Porção abdominal do peitoral maior",
     "original": "abdominal part of pectoralis major",
     "side": "right",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "abductordigitiminimiofleftfoot": {
-    "name": "Abdutor do dedo minimi do pé",
+    "name": "Abdutor do dedo mínimo do pé",
     "original": "abductor digiti minimi of foot",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "abductordigitiminimioflefthand": {
-    "name": "Abdutor do dedo minimi do mão",
+    "name": "Abdutor do dedo mínimo da mão",
     "original": "abductor digiti minimi of hand",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "abductordigitiminimiofrightfoot": {
-    "name": "Abdutor do dedo minimi do pé",
+    "name": "Abdutor do dedo mínimo do pé",
     "original": "abductor digiti minimi of foot",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "abductordigitiminimiofrighthand": {
-    "name": "Abdutor do dedo minimi do mão",
+    "name": "Abdutor do dedo mínimo da mão",
     "original": "abductor digiti minimi of hand",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "acromialpartofleftdeltoid": {
     "name": "Porção acromial do deltoide",
     "original": "acromial part of deltoid",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "acromialpartofrightdeltoid": {
     "name": "Porção acromial do deltoide",
     "original": "acromial part of deltoid",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "ascendingpartoflefttrapezius": {
     "name": "Porção ascendente do trapézio",
     "original": "ascending part of trapezius",
     "side": "left",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "ascendingpartofrighttrapezius": {
     "name": "Porção ascendente do trapézio",
     "original": "ascending part of trapezius",
     "side": "right",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "clavicularpartofleftdeltoid": {
     "name": "Porção clavicular do deltoide",
     "original": "clavicular part of deltoid",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "clavicularpartofleftpectoralismajor": {
     "name": "Porção clavicular do peitoral maior",
     "original": "clavicular part of pectoralis major",
     "side": "left",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "clavicularpartofrightdeltoid": {
     "name": "Porção clavicular do deltoide",
     "original": "clavicular part of deltoid",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "clavicularpartofrightpectoralismajor": {
     "name": "Porção clavicular do peitoral maior",
     "original": "clavicular part of pectoralis major",
     "side": "right",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "descendingpartoflefttrapezius": {
     "name": "Porção descendente do trapézio",
     "original": "descending part of trapezius",
     "side": "left",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "descendingpartofrighttrapezius": {
     "name": "Porção descendente do trapézio",
     "original": "descending part of trapezius",
     "side": "right",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "diaphragm": {
     "name": "Diafragma",
     "original": "diaphragm",
     "side": "midline",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "externalanalsphincter": {
-    "name": "Externo anal sphincter",
+    "name": "Esfíncter externo do ânus",
     "original": "external anal sphincter",
     "side": "midline",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Quadril",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "externalanalsphincter2": {
-    "name": "Externo anal sphincter (2)",
+    "name": "Esfíncter externo do ânus (2)",
     "original": "external anal sphincter (2)",
     "side": "midline",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Quadril",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "externalanalsphincter3": {
-    "name": "Externo anal sphincter (3)",
+    "name": "Esfíncter externo do ânus (3)",
     "original": "external anal sphincter (3)",
     "side": "midline",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Quadril",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "externalintercostalmuscle": {
-    "name": "Externo intercostal",
+    "name": "Intercostal externo",
     "original": "external intercostal muscle",
     "side": "midline",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "firstlumbricalofleftfoot": {
     "name": "First lumbrical do pé",
     "original": "first lumbrical of foot",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "firstlumbricalofrightfoot": {
     "name": "First lumbrical do pé",
     "original": "first lumbrical of foot",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "firstplantarinterosseousofleftfoot": {
     "name": "First plantar interósseo do pé",
     "original": "first plantar interosseous of foot",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "firstplantarinterosseousofrightfoot": {
     "name": "First plantar interósseo do pé",
     "original": "first plantar interosseous of foot",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "flexordigitiminimibrevisofleftfoot": {
-    "name": "Flexor do dedo minimi curto do pé",
+    "name": "Flexor do dedo mínimo curto do pé",
     "original": "flexor digiti minimi brevis of foot",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "flexordigitiminimibrevisoflefthand": {
-    "name": "Flexor do dedo minimi curto do mão",
+    "name": "Flexor do dedo mínimo curto da mão",
     "original": "flexor digiti minimi brevis of hand",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "flexordigitiminimibrevisofrightfoot": {
-    "name": "Flexor do dedo minimi curto do pé",
+    "name": "Flexor do dedo mínimo curto do pé",
     "original": "flexor digiti minimi brevis of foot",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "flexordigitiminimibrevisofrighthand": {
-    "name": "Flexor do dedo minimi curto do mão",
+    "name": "Flexor do dedo mínimo curto da mão",
     "original": "flexor digiti minimi brevis of hand",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "flexorretinaculumofleftwrist": {
-    "name": "Flexor retinaculum do wrist",
+    "name": "Retináculo dos flexores do punho",
     "original": "flexor retinaculum of wrist",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Retináculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "flexorretinaculumofrightwrist": {
-    "name": "Flexor retinaculum do wrist",
+    "name": "Retináculo dos flexores do punho",
     "original": "flexor retinaculum of wrist",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Retináculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "fourthlumbricalofleftfoot": {
     "name": "Fourth lumbrical do pé",
     "original": "fourth lumbrical of foot",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "fourthlumbricalofrightfoot": {
     "name": "Fourth lumbrical do pé",
     "original": "fourth lumbrical of foot",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "humeralheadofleftflexorcarpiulnaris": {
-    "name": "Humeral head do flexor do carpo ulnar",
+    "name": "Cabeça umeral do flexor ulnar do carpo",
     "original": "humeral head of flexor carpi ulnaris",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "humeralheadofleftpronatorteres": {
-    "name": "Humeral head do pronador teres",
+    "name": "Cabeça umeral do pronador redondo",
     "original": "humeral head of pronator teres",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "humeralheadofrightflexorcarpiulnaris": {
-    "name": "Humeral head do flexor do carpo ulnar",
+    "name": "Cabeça umeral do flexor ulnar do carpo",
     "original": "humeral head of flexor carpi ulnaris",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "humeralheadofrightpronatorteres": {
-    "name": "Humeral head do pronador teres",
+    "name": "Cabeça umeral do pronador redondo",
     "original": "humeral head of pronator teres",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "inferiorobliquepartofleftlonguscolli": {
     "name": "Inferior oblique porção do longo colli",
     "original": "inferior oblique part of longus colli",
     "side": "left",
-    "region": "Tronco",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "innermostintercostalmuscle": {
-    "name": "Íntimo intercostal",
+    "name": "Intercostal íntimo",
     "original": "innermost intercostal muscle",
     "side": "midline",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "internalintercostalmuscle": {
-    "name": "Interno intercostal",
+    "name": "Intercostal interno",
     "original": "internal intercostal muscle",
     "side": "midline",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "interosseousmembraneofleftforearm": {
-    "name": "Interósseo membrane do forearm",
+    "name": "Membrana interóssea do antebraço",
     "original": "interosseous membrane of forearm",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Membrana",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "interosseousmembraneofleftleg": {
-    "name": "Interósseo membrane do leg",
+    "name": "Membrana interóssea da perna",
     "original": "interosseous membrane of leg",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Membrana",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "interosseousmembraneofrightforearm": {
-    "name": "Interósseo membrane do forearm",
+    "name": "Membrana interóssea do antebraço",
     "original": "interosseous membrane of forearm",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Membrana",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "interosseousmembraneofrightleg": {
-    "name": "Interósseo membrane do leg",
+    "name": "Membrana interóssea da perna",
     "original": "interosseous membrane of leg",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Membrana",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "lateralheadofleftflexorhallucisbrevis": {
     "name": "Cabeça lateral do flexor do hálux curto",
     "original": "lateral head of flexor hallucis brevis",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "lateralheadofleftgastrocnemius": {
     "name": "Cabeça lateral do gastrocnêmio",
     "original": "lateral head of gastrocnemius",
     "side": "left",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "lateralheadoflefttricepsbrachii": {
     "name": "Cabeça lateral do tríceps braquial",
     "original": "lateral head of triceps brachii",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "lateralheadofrightflexorhallucisbrevis": {
     "name": "Cabeça lateral do flexor do hálux curto",
     "original": "lateral head of flexor hallucis brevis",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "lateralheadofrightgastrocnemius": {
     "name": "Cabeça lateral do gastrocnêmio",
     "original": "lateral head of gastrocnemius",
     "side": "right",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "lateralheadofrighttricepsbrachii": {
     "name": "Cabeça lateral do tríceps braquial",
     "original": "lateral head of triceps brachii",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "laterallumbarintertransversarius": {
     "name": "Lateral lombar intertransversarius",
     "original": "lateral lumbar intertransversarius",
     "side": "midline",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftabductorhallucis": {
     "name": "Abdutor do hálux",
     "original": "abductor hallucis",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftabductorpollicisbrevis": {
-    "name": "Abdutor pollicis curto",
+    "name": "Abdutor curto do polegar",
     "original": "abductor pollicis brevis",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftabductorpollicislongus": {
-    "name": "Abdutor pollicis longo",
+    "name": "Abdutor longo do polegar",
     "original": "abductor pollicis longus",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftadductorbrevis": {
     "name": "Adutor curto",
     "original": "adductor brevis",
     "side": "left",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftadductorlongus": {
     "name": "Adutor longo",
     "original": "adductor longus",
     "side": "left",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftadductormagnus": {
     "name": "Adutor magno",
     "original": "adductor magnus",
     "side": "left",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftadductorminimus": {
-    "name": "Adutor minimus",
+    "name": "Adutor mínimo",
     "original": "adductor minimus",
     "side": "left",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftanconeus": {
-    "name": "Anconeus",
+    "name": "Ancôneo",
     "original": "anconeus",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftarytenoidcartilage": {
-    "name": "Arytenoid cartilage",
+    "name": "Cartilagem aritenóidea",
     "original": "arytenoid cartilage",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Cartilagem"
+    "kind": "Cartilagem",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftbrachialis": {
-    "name": "Brachialis",
+    "name": "Braquial",
     "original": "brachialis",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftbrachioradialis": {
     "name": "Braquiorradial",
     "original": "brachioradialis",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftcalcanealtendon": {
     "name": "Tendão calcâneo",
     "original": "calcaneal tendon",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Tendão"
+    "kind": "Tendão",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftcoccygeus": {
-    "name": "Coccygeus",
+    "name": "Coccígeo",
     "original": "coccygeus",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftcoccygeus2": {
-    "name": "Coccygeus (2)",
+    "name": "Coccígeo (2)",
     "original": "coccygeus (2)",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftcoracobrachialis": {
-    "name": "Coracobrachialis",
+    "name": "Coracobraquial",
     "original": "coracobrachialis",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftdigastric": {
-    "name": "Digastric",
+    "name": "Digástrico",
     "original": "digastric",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftdigastric2": {
-    "name": "Digastric (2)",
+    "name": "Digástrico (2)",
     "original": "digastric (2)",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftdigastric3": {
-    "name": "Digastric (3)",
+    "name": "Digástrico (3)",
     "original": "digastric (3)",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftextensorcarpiradialisbrevis": {
-    "name": "Extensor do carpo radial curto",
+    "name": "Extensor radial curto do carpo",
     "original": "extensor carpi radialis brevis",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftextensorcarpiradialislongus": {
-    "name": "Extensor do carpo radial longo",
+    "name": "Extensor radial longo do carpo",
     "original": "extensor carpi radialis longus",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftextensorcarpiulnaris": {
-    "name": "Extensor do carpo ulnar",
+    "name": "Extensor ulnar do carpo",
     "original": "extensor carpi ulnaris",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftextensorcarpiulnaris2": {
-    "name": "Extensor do carpo ulnar (2)",
+    "name": "Extensor ulnar do carpo (2)",
     "original": "extensor carpi ulnaris (2)",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftextensordigitiminimi": {
-    "name": "Extensor do dedo minimi",
+    "name": "Extensor do dedo mínimo",
     "original": "extensor digiti minimi",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftextensordigitorum": {
     "name": "Extensor dos dedos",
     "original": "extensor digitorum",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftextensordigitorumlongus": {
-    "name": "Extensor dos dedos longo",
+    "name": "Extensor longo dos dedos",
     "original": "extensor digitorum longus",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftextensorhallucisbrevis": {
-    "name": "Extensor do hálux curto",
+    "name": "Extensor curto do hálux",
     "original": "extensor hallucis brevis",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftextensorhallucislongus": {
-    "name": "Extensor do hálux longo",
+    "name": "Extensor longo do hálux",
     "original": "extensor hallucis longus",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftextensorindicis": {
-    "name": "Extensor indicis",
+    "name": "Extensor do indicador",
     "original": "extensor indicis",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftextensorpollicisbrevis": {
-    "name": "Extensor pollicis curto",
+    "name": "Extensor curto do polegar",
     "original": "extensor pollicis brevis",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftextensorpollicislongus": {
-    "name": "Extensor pollicis longo",
+    "name": "Extensor longo do polegar",
     "original": "extensor pollicis longus",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftexternaloblique": {
     "name": "Oblíquo externo",
     "original": "external oblique",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftfibularisbrevis": {
     "name": "Fibular curto",
     "original": "fibularis brevis",
     "side": "left",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftfibularislongus": {
     "name": "Fibular longo",
     "original": "fibularis longus",
     "side": "left",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftfibularistertius": {
-    "name": "Fibularis tertius",
+    "name": "Fibular terceiro",
     "original": "fibularis tertius",
     "side": "left",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftflexoraccessorius": {
-    "name": "Flexor accessorius",
+    "name": "Quadrado plantar",
     "original": "flexor accessorius",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftflexorcarpiradialis": {
-    "name": "Flexor do carpo radial",
+    "name": "Flexor radial do carpo",
     "original": "flexor carpi radialis",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftflexordigitorumbrevis": {
-    "name": "Flexor dos dedos curto",
+    "name": "Flexor curto dos dedos",
     "original": "flexor digitorum brevis",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftflexordigitorumlongus": {
-    "name": "Flexor dos dedos longo",
+    "name": "Flexor longo dos dedos",
     "original": "flexor digitorum longus",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftflexordigitorumprofundus": {
-    "name": "Flexor dos dedos profundo",
+    "name": "Flexor profundo dos dedos",
     "original": "flexor digitorum profundus",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftflexordigitorumsuperficialis": {
-    "name": "Flexor dos dedos superficial",
+    "name": "Flexor superficial dos dedos",
     "original": "flexor digitorum superficialis",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftflexordigitorumsuperficialis2": {
-    "name": "Flexor dos dedos superficial (2)",
+    "name": "Flexor superficial dos dedos (2)",
     "original": "flexor digitorum superficialis (2)",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftflexorhallucislongus": {
-    "name": "Flexor do hálux longo",
+    "name": "Flexor longo do hálux",
     "original": "flexor hallucis longus",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftflexorpollicisbrevis": {
-    "name": "Flexor pollicis curto",
+    "name": "Flexor curto do polegar",
     "original": "flexor pollicis brevis",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftflexorpollicislongus": {
-    "name": "Flexor pollicis longo",
+    "name": "Flexor longo do polegar",
     "original": "flexor pollicis longus",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftgemellusinferior": {
-    "name": "Gemellus inferior",
+    "name": "Gêmeo inferior",
     "original": "gemellus inferior",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftgemellussuperior": {
-    "name": "Gemellus superior",
+    "name": "Gêmeo superior",
     "original": "gemellus superior",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftgeniohyoid": {
-    "name": "Geniohyoid",
+    "name": "Gênio-hióideo",
     "original": "geniohyoid",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftgluteusmaximus": {
     "name": "Glúteo máximo",
     "original": "gluteus maximus",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftgluteusmedius": {
     "name": "Glúteo médio",
     "original": "gluteus medius",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftgluteusminimus": {
     "name": "Glúteo mínimo",
     "original": "gluteus minimus",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftgracilis": {
-    "name": "Gracilis",
+    "name": "Grácil",
     "original": "gracilis",
     "side": "left",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftiliacus": {
-    "name": "Iliacus",
+    "name": "Ilíaco",
     "original": "iliacus",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftiliococcygeus": {
-    "name": "Iliococcygeus",
+    "name": "Iliococcígeo",
     "original": "iliococcygeus",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftiliococcygeus2": {
-    "name": "Iliococcygeus (2)",
+    "name": "Iliococcígeo (2)",
     "original": "iliococcygeus (2)",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftiliocostaliscervicis": {
     "name": "Iliocostalis cervicis",
     "original": "iliocostalis cervicis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftiliocostalislumborum": {
     "name": "Iliocostalis lumborum",
     "original": "iliocostalis lumborum",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftiliocostalisthoracis": {
     "name": "Iliocostalis thoracis",
     "original": "iliocostalis thoracis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftinferioroblique": {
-    "name": "Inferior oblique",
+    "name": "Oblíquo inferior",
     "original": "inferior oblique",
     "side": "left",
-    "region": "Tronco",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftinferiorrectus": {
-    "name": "Inferior rectus",
+    "name": "Reto inferior",
     "original": "inferior rectus",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftinfraspinatusmuscle": {
-    "name": "Infraspinatus",
+    "name": "Infraespinal",
     "original": "infraspinatus muscle",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Membros superiores",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftinterspinalisthoracis": {
     "name": "Interspinalis thoracis",
     "original": "interspinalis thoracis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftlateralcricoarytenoid": {
     "name": "Lateral crico-arytenoid",
     "original": "lateral crico-arytenoid",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftlateralrectus": {
-    "name": "Lateral rectus",
+    "name": "Reto lateral",
     "original": "lateral rectus",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftlevatorpalpebraesuperioris": {
-    "name": "Levator palpebrae superioris",
+    "name": "Levantador da pálpebra superior",
     "original": "levator palpebrae superioris",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftlevatorscapulae": {
-    "name": "Levator scapulae",
+    "name": "Levantador da escápula",
     "original": "levator scapulae",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Membros superiores",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftlevatorvelipalatini": {
     "name": "Levator veli palatini",
     "original": "levator veli palatini",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftlongplantarligament": {
-    "name": "Long plantar ligament",
+    "name": "Ligamento plantar longo",
     "original": "long plantar ligament",
     "side": "left",
     "region": "Pés",
-    "kind": "Ligamento"
+    "kind": "Ligamento",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftlongissimuscapitis": {
     "name": "Longissimus capitis",
     "original": "longissimus capitis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftlongissimuscervicis": {
     "name": "Longissimus cervicis",
     "original": "longissimus cervicis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftlongissimusthoracis": {
     "name": "Longissimus thoracis",
     "original": "longissimus thoracis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftlonguscapitis": {
-    "name": "Longo capitis",
+    "name": "Longo da cabeça",
     "original": "longus capitis",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftmedialrectus": {
-    "name": "Medial rectus",
+    "name": "Reto medial",
     "original": "medial rectus",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftmylohyoid": {
-    "name": "Mylohyoid",
+    "name": "Milo-hióideo",
     "original": "mylohyoid",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftobliquearytenoid": {
     "name": "Oblique arytenoid",
     "original": "oblique arytenoid",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftobturatorexternus": {
-    "name": "Obturator externus",
+    "name": "Obturador externo",
     "original": "obturator externus",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftobturatorinternus": {
-    "name": "Obturator internus",
+    "name": "Obturador interno",
     "original": "obturator internus",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftomohyoid": {
-    "name": "Omohyoid",
+    "name": "Omo-hióideo",
     "original": "omohyoid",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftopponenspollicis": {
-    "name": "Opponens pollicis",
+    "name": "Oponente do polegar",
     "original": "opponens pollicis",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftpalmarislongus": {
-    "name": "Palmaris longo",
+    "name": "Palmar longo",
     "original": "palmaris longus",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftpectineus": {
-    "name": "Pectineus",
+    "name": "Pectíneo",
     "original": "pectineus",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftpectoralisminor": {
     "name": "Peitoral menor",
     "original": "pectoralis minor",
     "side": "left",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftpiriformis": {
-    "name": "Piriformis",
+    "name": "Piriforme",
     "original": "piriformis",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftplantaris": {
-    "name": "Plantaris",
+    "name": "Plantar",
     "original": "plantaris",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftplatysma": {
-    "name": "Platysma",
+    "name": "Platisma",
     "original": "platysma",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftpopliteus": {
-    "name": "Popliteus",
+    "name": "Poplíteo",
     "original": "popliteus",
     "side": "left",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftposteriorcricoarytenoid": {
     "name": "Posterior crico-arytenoid",
     "original": "posterior crico-arytenoid",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftpronatorquadratus": {
-    "name": "Pronador quadratus",
+    "name": "Pronador quadrado",
     "original": "pronator quadratus",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftpsoasmajor": {
-    "name": "Psoas major",
+    "name": "Psoas maior",
     "original": "psoas major",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftpubococcygeus": {
-    "name": "Pubococcygeus",
+    "name": "Pubococcígeo",
     "original": "pubococcygeus",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftpubococcygeus2": {
-    "name": "Pubococcygeus (2)",
+    "name": "Pubococcígeo (2)",
     "original": "pubococcygeus (2)",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftpuborectalis": {
-    "name": "Puborectalis",
+    "name": "Puborretal",
     "original": "puborectalis",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftpuborectalis2": {
-    "name": "Puborectalis (2)",
+    "name": "Puborretal (2)",
     "original": "puborectalis (2)",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftquadratusfemoris": {
-    "name": "Quadratus femoris",
+    "name": "Quadrado femoral",
     "original": "quadratus femoris",
     "side": "left",
-    "region": "Coxa",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftrectuscapitisanterior": {
     "name": "Rectus capitis anterior",
     "original": "rectus capitis anterior",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftrectuscapitislateralis": {
     "name": "Rectus capitis lateralis",
     "original": "rectus capitis lateralis",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftrectuscapitisposteriormajor": {
     "name": "Rectus capitis posterior major",
     "original": "rectus capitis posterior major",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftrectuscapitisposteriorminor": {
     "name": "Rectus capitis posterior minor",
     "original": "rectus capitis posterior minor",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftrectusfemoris": {
     "name": "Reto femoral",
     "original": "rectus femoris",
     "side": "left",
-    "region": "Coxa",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftrhomboidmajor": {
     "name": "Romboide maior",
     "original": "rhomboid major",
     "side": "left",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftrhomboidminor": {
     "name": "Romboide menor",
     "original": "rhomboid minor",
     "side": "left",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsartorius": {
     "name": "Sartório",
     "original": "sartorius",
     "side": "left",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftscalenusanterior": {
-    "name": "Scalenus anterior",
+    "name": "Escaleno anterior",
     "original": "scalenus anterior",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftscalenusmedius": {
-    "name": "Scalenus medius",
+    "name": "Escaleno médio",
     "original": "scalenus medius",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftscalenusposterior": {
-    "name": "Scalenus posterior",
+    "name": "Escaleno posterior",
     "original": "scalenus posterior",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsemimembranosus": {
-    "name": "Semimembranosus",
+    "name": "Semimembranáceo",
     "original": "semimembranosus",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Coxa",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsemispinaliscapitis": {
     "name": "Semispinalis capitis",
     "original": "semispinalis capitis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsemispinaliscervicis": {
     "name": "Semispinalis cervicis",
     "original": "semispinalis cervicis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsemispinalisthoracis": {
     "name": "Semispinalis thoracis",
     "original": "semispinalis thoracis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsemitendinosus": {
-    "name": "Semitendinosus",
+    "name": "Semitendíneo",
     "original": "semitendinosus",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Coxa",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftserratusanterior": {
     "name": "Serrátil anterior",
     "original": "serratus anterior",
     "side": "left",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftserratusposteriorinferior": {
-    "name": "Serratus posterior inferior",
+    "name": "Serrátil posterior inferior",
     "original": "serratus posterior inferior",
     "side": "left",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftserratusposteriorsuperior": {
-    "name": "Serratus posterior superior",
+    "name": "Serrátil posterior superior",
     "original": "serratus posterior superior",
     "side": "left",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsoleus": {
     "name": "Sóleo",
     "original": "soleus",
     "side": "left",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftspinalisthoracis": {
     "name": "Spinalis thoracis",
     "original": "spinalis thoracis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftspleniuscapitis": {
-    "name": "Splenius capitis",
+    "name": "Esplênio da cabeça",
     "original": "splenius capitis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftspleniuscervicis": {
-    "name": "Splenius cervicis",
+    "name": "Esplênio do pescoço",
     "original": "splenius cervicis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsternocleidomastoid": {
     "name": "Esternocleidomastóideo",
     "original": "sternocleidomastoid",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsternohyoid": {
-    "name": "Sternohyoid",
+    "name": "Esterno-hióideo",
     "original": "sternohyoid",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsternothyroid": {
-    "name": "Sternothyroid",
+    "name": "Esternotireóideo",
     "original": "sternothyroid",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftstylohyoid": {
-    "name": "Stylohyoid",
+    "name": "Estilo-hióideo",
     "original": "stylohyoid",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsubclavius": {
-    "name": "Subclavius",
+    "name": "Subclávio",
     "original": "subclavius",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Membros superiores",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsubscapularis": {
-    "name": "Subscapularis",
+    "name": "Subescapular",
     "original": "subscapularis",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Membros superiores",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsuperioroblique": {
-    "name": "Superior oblique",
+    "name": "Oblíquo superior",
     "original": "superior oblique",
     "side": "left",
-    "region": "Tronco",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsuperiorrectus": {
-    "name": "Superior rectus",
+    "name": "Reto superior",
     "original": "superior rectus",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsupinator": {
     "name": "Supinador",
     "original": "supinator",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsupraspinatus": {
-    "name": "Supraspinatus",
+    "name": "Supraespinal",
     "original": "supraspinatus",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Membros superiores",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "lefttensorfasciaelatae": {
-    "name": "Tensor fasciae latae",
+    "name": "Tensor da fáscia lata",
     "original": "tensor fasciae latae",
     "side": "left",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "lefttensorvelipalatini": {
     "name": "Tensor veli palatini",
     "original": "tensor veli palatini",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftteresmajor": {
-    "name": "Teres major",
+    "name": "Redondo maior",
     "original": "teres major",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Membros superiores",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftteresminor": {
-    "name": "Teres minor",
+    "name": "Redondo menor",
     "original": "teres minor",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Membros superiores",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftthyroarytenoid": {
     "name": "Thyro-arytenoid",
     "original": "thyro-arytenoid",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftthyroarytenoid2": {
     "name": "Thyro-arytenoid (2)",
     "original": "thyro-arytenoid (2)",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftthyrohyoid": {
-    "name": "Thyrohyoid",
+    "name": "Tireo-hióideo",
     "original": "thyrohyoid",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "lefttibialisanterior": {
     "name": "Tibial anterior",
     "original": "tibialis anterior",
     "side": "left",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "lefttibialisposterior": {
     "name": "Tibial posterior",
     "original": "tibialis posterior",
     "side": "left",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "lefttransversusthoracis": {
-    "name": "Transverso thoracis",
+    "name": "Transverso do tórax",
     "original": "transversus thoracis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftvastusintermedius": {
     "name": "Vasto intermédio",
     "original": "vastus intermedius",
     "side": "left",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftvastuslateralis": {
     "name": "Vasto lateral",
     "original": "vastus lateralis",
     "side": "left",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftvastusmedialis": {
     "name": "Vasto medial",
     "original": "vastus medialis",
     "side": "left",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "longheadofleftbicepsbrachii": {
     "name": "Cabeça longa do bíceps braquial",
     "original": "long head of biceps brachii",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "longheadofleftbicepsfemoris": {
     "name": "Cabeça longa do bíceps femoral",
     "original": "long head of biceps femoris",
     "side": "left",
-    "region": "Coxa",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "longheadoflefttricepsbrachii": {
     "name": "Cabeça longa do tríceps braquial",
     "original": "long head of triceps brachii",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "longheadofrightbicepsbrachii": {
     "name": "Cabeça longa do bíceps braquial",
     "original": "long head of biceps brachii",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "longheadofrightbicepsfemoris": {
     "name": "Cabeça longa do bíceps femoral",
     "original": "long head of biceps femoris",
     "side": "right",
-    "region": "Coxa",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "longheadofrighttricepsbrachii": {
     "name": "Cabeça longa do tríceps braquial",
     "original": "long head of triceps brachii",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "medialheadofleftflexorhallucisbrevis": {
     "name": "Cabeça medial do flexor do hálux curto",
     "original": "medial head of flexor hallucis brevis",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "medialheadofleftgastrocnemius": {
     "name": "Cabeça medial do gastrocnêmio",
     "original": "medial head of gastrocnemius",
     "side": "left",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "medialheadoflefttricepsbrachii": {
     "name": "Cabeça medial do tríceps braquial",
     "original": "medial head of triceps brachii",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "medialheadofrightflexorhallucisbrevis": {
     "name": "Cabeça medial do flexor do hálux curto",
     "original": "medial head of flexor hallucis brevis",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "medialheadofrightgastrocnemius": {
     "name": "Cabeça medial do gastrocnêmio",
     "original": "medial head of gastrocnemius",
     "side": "right",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "medialheadofrighttricepsbrachii": {
     "name": "Cabeça medial do tríceps braquial",
     "original": "medial head of triceps brachii",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "mediallumbarintertransversarius": {
     "name": "Medial lombar intertransversarius",
     "original": "medial lumbar intertransversarius",
     "side": "midline",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "mediancricothyroidligament": {
     "name": "Median cricothyroid ligament",
     "original": "median cricothyroid ligament",
     "side": "midline",
     "region": "Cabeça e pescoço",
-    "kind": "Ligamento"
+    "kind": "Ligamento",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "obliqueheadofleftadductorhallucis": {
     "name": "Oblique head do adutor do hálux",
     "original": "oblique head of adductor hallucis",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "obliqueheadofleftadductorpollicis": {
-    "name": "Oblique head do adutor pollicis",
+    "name": "Oblique head do adutor do polegar",
     "original": "oblique head of adductor pollicis",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "obliqueheadofrightadductorhallucis": {
     "name": "Oblique head do adutor do hálux",
     "original": "oblique head of adductor hallucis",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "obliqueheadofrightadductorpollicis": {
-    "name": "Oblique head do adutor pollicis",
+    "name": "Oblique head do adutor do polegar",
     "original": "oblique head of adductor pollicis",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "obliquepartofleftcricothyroid": {
     "name": "Oblique porção do cricothyroid",
     "original": "oblique part of cricothyroid",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "obliquepartofrightcricothyroid": {
     "name": "Oblique porção do cricothyroid",
     "original": "oblique part of cricothyroid",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "opponensdigitiminimiofleftfoot": {
-    "name": "Opponens do dedo minimi do pé",
+    "name": "Opponens do dedo mínimo do pé",
     "original": "opponens digiti minimi of foot",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "opponensdigitiminimioflefthand": {
-    "name": "Opponens do dedo minimi do mão",
+    "name": "Opponens do dedo mínimo da mão",
     "original": "opponens digiti minimi of hand",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "opponensdigitiminimiofrightfoot": {
-    "name": "Opponens do dedo minimi do pé",
+    "name": "Opponens do dedo mínimo do pé",
     "original": "opponens digiti minimi of foot",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "opponensdigitiminimiofrighthand": {
-    "name": "Opponens do dedo minimi do mão",
+    "name": "Opponens do dedo mínimo da mão",
     "original": "opponens digiti minimi of hand",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightabductorhallucis": {
     "name": "Abdutor do hálux",
     "original": "abductor hallucis",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightabductorpollicisbrevis": {
-    "name": "Abdutor pollicis curto",
+    "name": "Abdutor curto do polegar",
     "original": "abductor pollicis brevis",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightabductorpollicislongus": {
-    "name": "Abdutor pollicis longo",
+    "name": "Abdutor longo do polegar",
     "original": "abductor pollicis longus",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightadductorbrevis": {
     "name": "Adutor curto",
     "original": "adductor brevis",
     "side": "right",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightadductorlongus": {
     "name": "Adutor longo",
     "original": "adductor longus",
     "side": "right",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightadductormagnus": {
     "name": "Adutor magno",
     "original": "adductor magnus",
     "side": "right",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightadductorminimus": {
-    "name": "Adutor minimus",
+    "name": "Adutor mínimo",
     "original": "adductor minimus",
     "side": "right",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightanconeus": {
-    "name": "Anconeus",
+    "name": "Ancôneo",
     "original": "anconeus",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightarytenoidcartilage": {
-    "name": "Arytenoid cartilage",
+    "name": "Cartilagem aritenóidea",
     "original": "arytenoid cartilage",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Cartilagem"
+    "kind": "Cartilagem",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightbrachialis": {
-    "name": "Brachialis",
+    "name": "Braquial",
     "original": "brachialis",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightbrachioradialis": {
     "name": "Braquiorradial",
     "original": "brachioradialis",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightcalcanealtendon": {
     "name": "Tendão calcâneo",
     "original": "calcaneal tendon",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Tendão"
+    "kind": "Tendão",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightcoccygeus": {
-    "name": "Coccygeus",
+    "name": "Coccígeo",
     "original": "coccygeus",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightcoracobrachialis": {
-    "name": "Coracobrachialis",
+    "name": "Coracobraquial",
     "original": "coracobrachialis",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightdigastric": {
-    "name": "Digastric",
+    "name": "Digástrico",
     "original": "digastric",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightdigastric2": {
-    "name": "Digastric (2)",
+    "name": "Digástrico (2)",
     "original": "digastric (2)",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightextensorcarpiradialisbrevis": {
-    "name": "Extensor do carpo radial curto",
+    "name": "Extensor radial curto do carpo",
     "original": "extensor carpi radialis brevis",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightextensorcarpiradialislongus": {
-    "name": "Extensor do carpo radial longo",
+    "name": "Extensor radial longo do carpo",
     "original": "extensor carpi radialis longus",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightextensorcarpiulnaris": {
-    "name": "Extensor do carpo ulnar",
+    "name": "Extensor ulnar do carpo",
     "original": "extensor carpi ulnaris",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightextensorcarpiulnaris2": {
-    "name": "Extensor do carpo ulnar (2)",
+    "name": "Extensor ulnar do carpo (2)",
     "original": "extensor carpi ulnaris (2)",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightextensordigitiminimi": {
-    "name": "Extensor do dedo minimi",
+    "name": "Extensor do dedo mínimo",
     "original": "extensor digiti minimi",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightextensordigitorum": {
     "name": "Extensor dos dedos",
     "original": "extensor digitorum",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightextensordigitorumlongus": {
-    "name": "Extensor dos dedos longo",
+    "name": "Extensor longo dos dedos",
     "original": "extensor digitorum longus",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightextensorhallucisbrevis": {
-    "name": "Extensor do hálux curto",
+    "name": "Extensor curto do hálux",
     "original": "extensor hallucis brevis",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightextensorhallucislongus": {
-    "name": "Extensor do hálux longo",
+    "name": "Extensor longo do hálux",
     "original": "extensor hallucis longus",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightextensorindicis": {
-    "name": "Extensor indicis",
+    "name": "Extensor do indicador",
     "original": "extensor indicis",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightextensorpollicisbrevis": {
-    "name": "Extensor pollicis curto",
+    "name": "Extensor curto do polegar",
     "original": "extensor pollicis brevis",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightextensorpollicislongus": {
-    "name": "Extensor pollicis longo",
+    "name": "Extensor longo do polegar",
     "original": "extensor pollicis longus",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightexternaloblique": {
     "name": "Oblíquo externo",
     "original": "external oblique",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightfibularisbrevis": {
     "name": "Fibular curto",
     "original": "fibularis brevis",
     "side": "right",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightfibularislongus": {
     "name": "Fibular longo",
     "original": "fibularis longus",
     "side": "right",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightfibularistertius": {
-    "name": "Fibularis tertius",
+    "name": "Fibular terceiro",
     "original": "fibularis tertius",
     "side": "right",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightflexoraccessorius": {
-    "name": "Flexor accessorius",
+    "name": "Quadrado plantar",
     "original": "flexor accessorius",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightflexorcarpiradialis": {
-    "name": "Flexor do carpo radial",
+    "name": "Flexor radial do carpo",
     "original": "flexor carpi radialis",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightflexordigitorumbrevis": {
-    "name": "Flexor dos dedos curto",
+    "name": "Flexor curto dos dedos",
     "original": "flexor digitorum brevis",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightflexordigitorumlongus": {
-    "name": "Flexor dos dedos longo",
+    "name": "Flexor longo dos dedos",
     "original": "flexor digitorum longus",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightflexordigitorumprofundus": {
-    "name": "Flexor dos dedos profundo",
+    "name": "Flexor profundo dos dedos",
     "original": "flexor digitorum profundus",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightflexordigitorumsuperficialis": {
-    "name": "Flexor dos dedos superficial",
+    "name": "Flexor superficial dos dedos",
     "original": "flexor digitorum superficialis",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightflexordigitorumsuperficialis2": {
-    "name": "Flexor dos dedos superficial (2)",
+    "name": "Flexor superficial dos dedos (2)",
     "original": "flexor digitorum superficialis (2)",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightflexorhallucislongus": {
-    "name": "Flexor do hálux longo",
+    "name": "Flexor longo do hálux",
     "original": "flexor hallucis longus",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightflexorpollicisbrevis": {
-    "name": "Flexor pollicis curto",
+    "name": "Flexor curto do polegar",
     "original": "flexor pollicis brevis",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightflexorpollicislongus": {
-    "name": "Flexor pollicis longo",
+    "name": "Flexor longo do polegar",
     "original": "flexor pollicis longus",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightgemellusinferior": {
-    "name": "Gemellus inferior",
+    "name": "Gêmeo inferior",
     "original": "gemellus inferior",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightgemellussuperior": {
-    "name": "Gemellus superior",
+    "name": "Gêmeo superior",
     "original": "gemellus superior",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightgeniohyoid": {
-    "name": "Geniohyoid",
+    "name": "Gênio-hióideo",
     "original": "geniohyoid",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightgluteusmaximus": {
     "name": "Glúteo máximo",
     "original": "gluteus maximus",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightgluteusmedius": {
     "name": "Glúteo médio",
     "original": "gluteus medius",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightgluteusminimus": {
     "name": "Glúteo mínimo",
     "original": "gluteus minimus",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightgracilis": {
-    "name": "Gracilis",
+    "name": "Grácil",
     "original": "gracilis",
     "side": "right",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightiliacus": {
-    "name": "Iliacus",
+    "name": "Ilíaco",
     "original": "iliacus",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightiliococcygeus": {
-    "name": "Iliococcygeus",
+    "name": "Iliococcígeo",
     "original": "iliococcygeus",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightiliocostaliscervicis": {
     "name": "Iliocostalis cervicis",
     "original": "iliocostalis cervicis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightiliocostalislumborum": {
     "name": "Iliocostalis lumborum",
     "original": "iliocostalis lumborum",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightiliocostalisthoracis": {
     "name": "Iliocostalis thoracis",
     "original": "iliocostalis thoracis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightinferioroblique": {
-    "name": "Inferior oblique",
+    "name": "Oblíquo inferior",
     "original": "inferior oblique",
     "side": "right",
-    "region": "Tronco",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightinferiorrectus": {
-    "name": "Inferior rectus",
+    "name": "Reto inferior",
     "original": "inferior rectus",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightinfraspinatusmuscle": {
-    "name": "Infraspinatus",
+    "name": "Infraespinal",
     "original": "infraspinatus muscle",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Membros superiores",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightintermediatetendon": {
     "name": "Tendão intermédio",
     "original": "intermediate tendon",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Tendão"
+    "kind": "Tendão",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightinterspinalisthoracis": {
     "name": "Interspinalis thoracis",
     "original": "interspinalis thoracis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightlateralcricoarytenoid": {
     "name": "Lateral crico-arytenoid",
     "original": "lateral crico-arytenoid",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightlateralrectus": {
-    "name": "Lateral rectus",
+    "name": "Reto lateral",
     "original": "lateral rectus",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightlevatorpalpebraesuperioris": {
-    "name": "Levator palpebrae superioris",
+    "name": "Levantador da pálpebra superior",
     "original": "levator palpebrae superioris",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightlevatorscapulae": {
-    "name": "Levator scapulae",
+    "name": "Levantador da escápula",
     "original": "levator scapulae",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Membros superiores",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightlevatorvelipalatini": {
     "name": "Levator veli palatini",
     "original": "levator veli palatini",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightlongplantarligament": {
-    "name": "Long plantar ligament",
+    "name": "Ligamento plantar longo",
     "original": "long plantar ligament",
     "side": "right",
     "region": "Pés",
-    "kind": "Ligamento"
+    "kind": "Ligamento",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightlongissimuscapitis": {
     "name": "Longissimus capitis",
     "original": "longissimus capitis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightlongissimuscervicis": {
     "name": "Longissimus cervicis",
     "original": "longissimus cervicis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightlongissimusthoracis": {
     "name": "Longissimus thoracis",
     "original": "longissimus thoracis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightlonguscapitis": {
-    "name": "Longo capitis",
+    "name": "Longo da cabeça",
     "original": "longus capitis",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightmedialrectus": {
-    "name": "Medial rectus",
+    "name": "Reto medial",
     "original": "medial rectus",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightmylohyoid": {
-    "name": "Mylohyoid",
+    "name": "Milo-hióideo",
     "original": "mylohyoid",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightobliquearytenoid": {
     "name": "Oblique arytenoid",
     "original": "oblique arytenoid",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightobturatorexternus": {
-    "name": "Obturator externus",
+    "name": "Obturador externo",
     "original": "obturator externus",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightobturatorinternus": {
-    "name": "Obturator internus",
+    "name": "Obturador interno",
     "original": "obturator internus",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightomohyoid": {
-    "name": "Omohyoid",
+    "name": "Omo-hióideo",
     "original": "omohyoid",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightopponenspollicis": {
-    "name": "Opponens pollicis",
+    "name": "Oponente do polegar",
     "original": "opponens pollicis",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightpalmarislongus": {
-    "name": "Palmaris longo",
+    "name": "Palmar longo",
     "original": "palmaris longus",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightpectineus": {
-    "name": "Pectineus",
+    "name": "Pectíneo",
     "original": "pectineus",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightpectoralisminor": {
     "name": "Peitoral menor",
     "original": "pectoralis minor",
     "side": "right",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightpiriformis": {
-    "name": "Piriformis",
+    "name": "Piriforme",
     "original": "piriformis",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightplantaris": {
-    "name": "Plantaris",
+    "name": "Plantar",
     "original": "plantaris",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightplatysma": {
-    "name": "Platysma",
+    "name": "Platisma",
     "original": "platysma",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightpopliteus": {
-    "name": "Popliteus",
+    "name": "Poplíteo",
     "original": "popliteus",
     "side": "right",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightposteriorcricoarytenoid": {
     "name": "Posterior crico-arytenoid",
     "original": "posterior crico-arytenoid",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightpronatorquadratus": {
-    "name": "Pronador quadratus",
+    "name": "Pronador quadrado",
     "original": "pronator quadratus",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightpsoasmajor": {
-    "name": "Psoas major",
+    "name": "Psoas maior",
     "original": "psoas major",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightpubococcygeus": {
-    "name": "Pubococcygeus",
+    "name": "Pubococcígeo",
     "original": "pubococcygeus",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightpuborectalis": {
-    "name": "Puborectalis",
+    "name": "Puborretal",
     "original": "puborectalis",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightquadratusfemoris": {
-    "name": "Quadratus femoris",
+    "name": "Quadrado femoral",
     "original": "quadratus femoris",
     "side": "right",
-    "region": "Coxa",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightrectuscapitisanterior": {
     "name": "Rectus capitis anterior",
     "original": "rectus capitis anterior",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightrectuscapitislateralis": {
     "name": "Rectus capitis lateralis",
     "original": "rectus capitis lateralis",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightrectuscapitisposteriormajor": {
     "name": "Rectus capitis posterior major",
     "original": "rectus capitis posterior major",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightrectuscapitisposteriorminor": {
     "name": "Rectus capitis posterior minor",
     "original": "rectus capitis posterior minor",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightrectusfemoris": {
     "name": "Reto femoral",
     "original": "rectus femoris",
     "side": "right",
-    "region": "Coxa",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightrhomboidmajor": {
     "name": "Romboide maior",
     "original": "rhomboid major",
     "side": "right",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightrhomboidminor": {
     "name": "Romboide menor",
     "original": "rhomboid minor",
     "side": "right",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsartorius": {
     "name": "Sartório",
     "original": "sartorius",
     "side": "right",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightscalenusanterior": {
-    "name": "Scalenus anterior",
+    "name": "Escaleno anterior",
     "original": "scalenus anterior",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightscalenusmedius": {
-    "name": "Scalenus medius",
+    "name": "Escaleno médio",
     "original": "scalenus medius",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightscalenusposterior": {
-    "name": "Scalenus posterior",
+    "name": "Escaleno posterior",
     "original": "scalenus posterior",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsemimembranosus": {
-    "name": "Semimembranosus",
+    "name": "Semimembranáceo",
     "original": "semimembranosus",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Coxa",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsemispinaliscapitis": {
     "name": "Semispinalis capitis",
     "original": "semispinalis capitis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsemispinaliscervicis": {
     "name": "Semispinalis cervicis",
     "original": "semispinalis cervicis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsemispinalisthoracis": {
     "name": "Semispinalis thoracis",
     "original": "semispinalis thoracis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsemitendinosus": {
-    "name": "Semitendinosus",
+    "name": "Semitendíneo",
     "original": "semitendinosus",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Coxa",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightserratusanterior": {
     "name": "Serrátil anterior",
     "original": "serratus anterior",
     "side": "right",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightserratusposteriorinferior": {
-    "name": "Serratus posterior inferior",
+    "name": "Serrátil posterior inferior",
     "original": "serratus posterior inferior",
     "side": "right",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightserratusposteriorsuperior": {
-    "name": "Serratus posterior superior",
+    "name": "Serrátil posterior superior",
     "original": "serratus posterior superior",
     "side": "right",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsoleus": {
     "name": "Sóleo",
     "original": "soleus",
     "side": "right",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightspinalisthoracis": {
     "name": "Spinalis thoracis",
     "original": "spinalis thoracis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightspleniuscapitis": {
-    "name": "Splenius capitis",
+    "name": "Esplênio da cabeça",
     "original": "splenius capitis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightspleniuscervicis": {
-    "name": "Splenius cervicis",
+    "name": "Esplênio do pescoço",
     "original": "splenius cervicis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsternocleidomastoid": {
     "name": "Esternocleidomastóideo",
     "original": "sternocleidomastoid",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsternohyoid": {
-    "name": "Sternohyoid",
+    "name": "Esterno-hióideo",
     "original": "sternohyoid",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsternothyroid": {
-    "name": "Sternothyroid",
+    "name": "Esternotireóideo",
     "original": "sternothyroid",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightstylohyoid": {
-    "name": "Stylohyoid",
+    "name": "Estilo-hióideo",
     "original": "stylohyoid",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsubclavius": {
-    "name": "Subclavius",
+    "name": "Subclávio",
     "original": "subclavius",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Membros superiores",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsubscapularis": {
-    "name": "Subscapularis",
+    "name": "Subescapular",
     "original": "subscapularis",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Membros superiores",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsuperioroblique": {
-    "name": "Superior oblique",
+    "name": "Oblíquo superior",
     "original": "superior oblique",
     "side": "right",
-    "region": "Tronco",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsuperiorrectus": {
-    "name": "Superior rectus",
+    "name": "Reto superior",
     "original": "superior rectus",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsupinator": {
     "name": "Supinador",
     "original": "supinator",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsupraspinatus": {
-    "name": "Supraspinatus",
+    "name": "Supraespinal",
     "original": "supraspinatus",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Membros superiores",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "righttensorfasciaelatae": {
-    "name": "Tensor fasciae latae",
+    "name": "Tensor da fáscia lata",
     "original": "tensor fasciae latae",
     "side": "right",
     "region": "Quadril",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "righttensorvelipalatini": {
     "name": "Tensor veli palatini",
     "original": "tensor veli palatini",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightteresmajor": {
-    "name": "Teres major",
+    "name": "Redondo maior",
     "original": "teres major",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Membros superiores",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightteresminor": {
-    "name": "Teres minor",
+    "name": "Redondo menor",
     "original": "teres minor",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Membros superiores",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightthyroarytenoid": {
     "name": "Thyro-arytenoid",
     "original": "thyro-arytenoid",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightthyroarytenoid2": {
     "name": "Thyro-arytenoid (2)",
     "original": "thyro-arytenoid (2)",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightthyrohyoid": {
-    "name": "Thyrohyoid",
+    "name": "Tireo-hióideo",
     "original": "thyrohyoid",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "righttibialisanterior": {
     "name": "Tibial anterior",
     "original": "tibialis anterior",
     "side": "right",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "righttibialisposterior": {
     "name": "Tibial posterior",
     "original": "tibialis posterior",
     "side": "right",
     "region": "Perna",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "righttransversusthoracis": {
-    "name": "Transverso thoracis",
+    "name": "Transverso do tórax",
     "original": "transversus thoracis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightvastusintermedius": {
     "name": "Vasto intermédio",
     "original": "vastus intermedius",
     "side": "right",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightvastuslateralis": {
     "name": "Vasto lateral",
     "original": "vastus lateralis",
     "side": "right",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightvastusmedialis": {
     "name": "Vasto medial",
     "original": "vastus medialis",
     "side": "right",
     "region": "Coxa",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "secondlumbricalofleftfoot": {
     "name": "Second lumbrical do pé",
     "original": "second lumbrical of foot",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "secondlumbricalofrightfoot": {
     "name": "Second lumbrical do pé",
     "original": "second lumbrical of foot",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "secondplantarinterosseousofleftfoot": {
     "name": "Second plantar interósseo do pé",
     "original": "second plantar interosseous of foot",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "secondplantarinterosseousofrightfoot": {
     "name": "Second plantar interósseo do pé",
     "original": "second plantar interosseous of foot",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "setofanteriorcervicalintertransversarii": {
     "name": "Set do anterior cervical intertransversarii",
     "original": "set of anterior cervical intertransversarii",
     "side": "midline",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "setofdorsalinterosseioflefthand": {
-    "name": "Set do dorsal interossei do mão",
+    "name": "Set do dorsal interossei da mão",
     "original": "set of dorsal interossei of hand",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "setofdorsalinterosseiofrighthand": {
-    "name": "Set do dorsal interossei do mão",
+    "name": "Set do dorsal interossei da mão",
     "original": "set of dorsal interossei of hand",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "setofinterspinalescervicis": {
     "name": "Set do interspinales cervicis",
     "original": "set of interspinales cervicis",
     "side": "midline",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "setofinterspinaleslumborum": {
     "name": "Set do interspinales lumborum",
     "original": "set of interspinales lumborum",
     "side": "midline",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "setofleftlevatorescostarumbreves": {
     "name": "Set do levatores costarum breves",
     "original": "set of levatores costarum breves",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "setofleftlevatorescostarumlongi": {
     "name": "Set do levatores costarum longi",
     "original": "set of levatores costarum longi",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "setoflumbricalsoflefthand": {
-    "name": "Set do lumbricals do mão",
+    "name": "Set do lumbricals da mão",
     "original": "set of lumbricals of hand",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "setoflumbricalsofrighthand": {
-    "name": "Set do lumbricals do mão",
+    "name": "Set do lumbricals da mão",
     "original": "set of lumbricals of hand",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "setofpalmarinterosseioflefthand": {
-    "name": "Set do palmar interossei do mão",
+    "name": "Set do palmar interossei da mão",
     "original": "set of palmar interossei of hand",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "setofpalmarinterosseiofrighthand": {
-    "name": "Set do palmar interossei do mão",
+    "name": "Set do palmar interossei da mão",
     "original": "set of palmar interossei of hand",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "setofposteriorcervicalintertransversarii": {
     "name": "Set do posterior cervical intertransversarii",
     "original": "set of posterior cervical intertransversarii",
     "side": "midline",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "setofrightlevatorescostarumbreves": {
     "name": "Set do levatores costarum breves",
     "original": "set of levatores costarum breves",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "setofrightlevatorescostarumlongi": {
     "name": "Set do levatores costarum longi",
     "original": "set of levatores costarum longi",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "shortheadofleftbicepsbrachii": {
     "name": "Cabeça curta do bíceps braquial",
     "original": "short head of biceps brachii",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "shortheadofleftbicepsfemoris": {
     "name": "Cabeça curta do bíceps femoral",
     "original": "short head of biceps femoris",
     "side": "left",
-    "region": "Coxa",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "shortheadofrightbicepsbrachii": {
     "name": "Cabeça curta do bíceps braquial",
     "original": "short head of biceps brachii",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "shortheadofrightbicepsfemoris": {
     "name": "Cabeça curta do bíceps femoral",
     "original": "short head of biceps femoris",
     "side": "right",
-    "region": "Coxa",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "spinalpartofleftdeltoid": {
     "name": "Porção espinal do deltoide",
     "original": "spinal part of deltoid",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "spinalpartofrightdeltoid": {
     "name": "Porção espinal do deltoide",
     "original": "spinal part of deltoid",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "spinalis": {
     "name": "Spinalis",
     "original": "spinalis",
     "side": "midline",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "sternocostalpartofleftpectoralismajor": {
-    "name": "Sternocostal porção do peitoral maior",
+    "name": "Porção esternocostal do peitoral maior",
     "original": "sternocostal part of pectoralis major",
     "side": "left",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "sternocostalpartofrightpectoralismajor": {
-    "name": "Sternocostal porção do peitoral maior",
+    "name": "Porção esternocostal do peitoral maior",
     "original": "sternocostal part of pectoralis major",
     "side": "right",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "straightpartofleftcricothyroid": {
     "name": "Straight porção do cricothyroid",
     "original": "straight part of cricothyroid",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "straightpartofrightcricothyroid": {
     "name": "Straight porção do cricothyroid",
     "original": "straight part of cricothyroid",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "superficialheadofleftflexorpollicisbrevis": {
-    "name": "Superficial head do flexor pollicis curto",
+    "name": "Superficial head do flexor do polegar curto",
     "original": "superficial head of flexor pollicis brevis",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "superficialheadofrightflexorpollicisbrevis": {
-    "name": "Superficial head do flexor pollicis curto",
+    "name": "Superficial head do flexor do polegar curto",
     "original": "superficial head of flexor pollicis brevis",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "superiorobliquepartofleftlonguscolli": {
     "name": "Superior oblique porção do longo colli",
     "original": "superior oblique part of longus colli",
     "side": "left",
-    "region": "Tronco",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "tendinousarchoflevatorani": {
     "name": "Tendinous arch do levator ani",
     "original": "tendinous arch of levator ani",
     "side": "midline",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Quadril",
+    "kind": "Tendão",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "tendinousarchoflevatorani2": {
     "name": "Tendinous arch do levator ani (2)",
     "original": "tendinous arch of levator ani (2)",
     "side": "midline",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Quadril",
+    "kind": "Tendão",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "tendinousarchoflevatorani3": {
     "name": "Tendinous arch do levator ani (3)",
     "original": "tendinous arch of levator ani (3)",
     "side": "midline",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Quadril",
+    "kind": "Tendão",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "tendonofrightlevatorpalpebraesuperioris": {
     "name": "Tendão do levator palpebrae superioris",
     "original": "tendon of levator palpebrae superioris",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Tendão"
+    "kind": "Tendão",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "thirdlumbricalofleftfoot": {
     "name": "Third lumbrical do pé",
     "original": "third lumbrical of foot",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "thirdlumbricalofrightfoot": {
     "name": "Third lumbrical do pé",
     "original": "third lumbrical of foot",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "thirdplantarinterosseousofleftfoot": {
     "name": "Third plantar interósseo do pé",
     "original": "third plantar interosseous of foot",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "thirdplantarinterosseousofrightfoot": {
     "name": "Third plantar interósseo do pé",
     "original": "third plantar interosseous of foot",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "transversearytenoid": {
     "name": "Transverso arytenoid",
     "original": "transverse arytenoid",
     "side": "midline",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "transverseheadofleftadductorhallucis": {
     "name": "Transverso head do adutor do hálux",
     "original": "transverse head of adductor hallucis",
     "side": "left",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "transverseheadofleftadductorpollicis": {
-    "name": "Transverso head do adutor pollicis",
+    "name": "Transverso head do adutor do polegar",
     "original": "transverse head of adductor pollicis",
     "side": "left",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "transverseheadofrightadductorhallucis": {
     "name": "Transverso head do adutor do hálux",
     "original": "transverse head of adductor hallucis",
     "side": "right",
     "region": "Pés",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "transverseheadofrightadductorpollicis": {
-    "name": "Transverso head do adutor pollicis",
+    "name": "Transverso head do adutor do polegar",
     "original": "transverse head of adductor pollicis",
     "side": "right",
     "region": "Mãos",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "transversepartoflefttrapezius": {
     "name": "Porção transversa do trapézio",
     "original": "transverse part of trapezius",
     "side": "left",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "transversepartofrighttrapezius": {
     "name": "Porção transversa do trapézio",
     "original": "transverse part of trapezius",
     "side": "right",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "ulnarheadofleftflexorcarpiulnaris": {
-    "name": "Ulnar head do flexor do carpo ulnar",
+    "name": "Cabeça ulnar do flexor ulnar do carpo",
     "original": "ulnar head of flexor carpi ulnaris",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "ulnarheadofleftpronatorteres": {
-    "name": "Ulnar head do pronador teres",
+    "name": "Cabeça ulnar do pronador redondo",
     "original": "ulnar head of pronator teres",
     "side": "left",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "ulnarheadofrightflexorcarpiulnaris": {
-    "name": "Ulnar head do flexor do carpo ulnar",
+    "name": "Cabeça ulnar do flexor ulnar do carpo",
     "original": "ulnar head of flexor carpi ulnaris",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "ulnarheadofrightpronatorteres": {
-    "name": "Ulnar head do pronador teres",
+    "name": "Cabeça ulnar do pronador redondo",
     "original": "ulnar head of pronator teres",
     "side": "right",
     "region": "Membros superiores",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "verticalintermediatepartofleftlonguscolli": {
     "name": "Vertical intermediate porção do longo colli",
     "original": "vertical intermediate part of longus colli",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftlatissimusdorsi": {
     "name": "Latíssimo do dorso",
     "original": "latissimus dorsi",
     "side": "left",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightlatissimusdorsi": {
     "name": "Latíssimo do dorso",
     "original": "latissimus dorsi",
     "side": "right",
     "region": "Tórax e dorso",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftrectusabdominis": {
     "name": "Reto abdominal",
     "original": "rectus abdominis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightrectusabdominis": {
     "name": "Reto abdominal",
     "original": "rectus abdominis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftinternaloblique": {
     "name": "Oblíquo interno",
     "original": "internal oblique",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightinternaloblique": {
     "name": "Oblíquo interno",
     "original": "internal oblique",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "lefttransversusabdominis": {
-    "name": "Transverso abdominis",
+    "name": "Transverso do abdome",
     "original": "transversus abdominis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "righttransversusabdominis": {
-    "name": "Transverso abdominis",
+    "name": "Transverso do abdome",
     "original": "transversus abdominis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftquadratuslumborum": {
     "name": "Quadrado lombar",
     "original": "quadratus lumborum",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightquadratuslumborum": {
     "name": "Quadrado lombar",
     "original": "quadratus lumborum",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsuperficialpartofmasseter": {
-    "name": "Superficial porção do masseter",
+    "name": "Porção superficial do masseter",
     "original": "superficial part of masseter",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsuperficialpartofmasseter": {
-    "name": "Superficial porção do masseter",
+    "name": "Porção superficial do masseter",
     "original": "superficial part of masseter",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftdeeppartofmasseter": {
-    "name": "Deep porção do masseter",
+    "name": "Porção profunda do masseter",
     "original": "deep part of masseter",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightdeeppartofmasseter": {
-    "name": "Deep porção do masseter",
+    "name": "Porção profunda do masseter",
     "original": "deep part of masseter",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "lefttemporalis": {
     "name": "Temporal",
     "original": "temporalis",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "righttemporalis": {
     "name": "Temporal",
     "original": "temporalis",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftmedialpterygoid": {
     "name": "Medial pterygoid",
     "original": "medial pterygoid",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightmedialpterygoid": {
     "name": "Medial pterygoid",
     "original": "medial pterygoid",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftinferiorheadoflateralpterygoid": {
     "name": "Inferior head do lateral pterygoid",
     "original": "inferior head of lateral pterygoid",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightinferiorheadoflateralpterygoid": {
     "name": "Inferior head do lateral pterygoid",
     "original": "inferior head of lateral pterygoid",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftsuperiorheadoflateralpterygoid": {
     "name": "Superior head do lateral pterygoid",
     "original": "superior head of lateral pterygoid",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightsuperiorheadoflateralpterygoid": {
     "name": "Superior head do lateral pterygoid",
     "original": "superior head of lateral pterygoid",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftfrontalis": {
-    "name": "Frontalis",
+    "name": "Frontal",
     "original": "frontalis",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightfrontalis": {
-    "name": "Frontalis",
+    "name": "Frontal",
     "original": "frontalis",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftorbitalpartoforbicularisoculi": {
     "name": "Orbital porção do orbicularis oculi",
     "original": "orbital part of orbicularis oculi",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightorbitalpartoforbicularisoculi": {
     "name": "Orbital porção do orbicularis oculi",
     "original": "orbital part of orbicularis oculi",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftpalpebralpartoforbicularisoculi": {
     "name": "Palpebral porção do orbicularis oculi",
     "original": "palpebral part of orbicularis oculi",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightpalpebralpartoforbicularisoculi": {
     "name": "Palpebral porção do orbicularis oculi",
     "original": "palpebral part of orbicularis oculi",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftorbicularisoris": {
-    "name": "Orbicularis oris",
+    "name": "Orbicular da boca",
     "original": "orbicularis oris",
     "side": "left",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightorbicularisoris": {
-    "name": "Orbicularis oris",
+    "name": "Orbicular da boca",
     "original": "orbicularis oris",
     "side": "right",
     "region": "Cabeça e pescoço",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftzygomaticusmajor": {
-    "name": "Zygomaticus major",
+    "name": "Zigomático maior",
     "original": "zygomaticus major",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightzygomaticusmajor": {
-    "name": "Zygomaticus major",
+    "name": "Zigomático maior",
     "original": "zygomaticus major",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftzygomaticusminor": {
-    "name": "Zygomaticus minor",
+    "name": "Zigomático menor",
     "original": "zygomaticus minor",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightzygomaticusminor": {
-    "name": "Zygomaticus minor",
+    "name": "Zigomático menor",
     "original": "zygomaticus minor",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftlevatorlabiisuperioris": {
-    "name": "Levator labii superioris",
+    "name": "Levantador do lábio superior",
     "original": "levator labii superioris",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightlevatorlabiisuperioris": {
-    "name": "Levator labii superioris",
+    "name": "Levantador do lábio superior",
     "original": "levator labii superioris",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftdepressorlabiiinferioris": {
-    "name": "Depressor labii inferioris",
+    "name": "Depressor do lábio inferior",
     "original": "depressor labii inferioris",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightdepressorlabiiinferioris": {
-    "name": "Depressor labii inferioris",
+    "name": "Depressor do lábio inferior",
     "original": "depressor labii inferioris",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftdepressorangulioris": {
-    "name": "Depressor anguli oris",
+    "name": "Depressor do ângulo da boca",
     "original": "depressor anguli oris",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightdepressorangulioris": {
-    "name": "Depressor anguli oris",
+    "name": "Depressor do ângulo da boca",
     "original": "depressor anguli oris",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftrisorius": {
-    "name": "Risorius",
+    "name": "Risório",
     "original": "risorius",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightrisorius": {
-    "name": "Risorius",
+    "name": "Risório",
     "original": "risorius",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftmentalis": {
-    "name": "Mentalis",
+    "name": "Mentual",
     "original": "mentalis",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightmentalis": {
-    "name": "Mentalis",
+    "name": "Mentual",
     "original": "mentalis",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftprocerus": {
-    "name": "Procerus",
+    "name": "Prócero",
     "original": "procerus",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightprocerus": {
-    "name": "Procerus",
+    "name": "Prócero",
     "original": "procerus",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftnasalis": {
-    "name": "Nasalis",
+    "name": "Nasal",
     "original": "nasalis",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightnasalis": {
-    "name": "Nasalis",
+    "name": "Nasal",
     "original": "nasalis",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftcorrugatorsupercilii": {
-    "name": "Corrugator supercilii",
+    "name": "Corrugador do supercílio",
     "original": "corrugator supercilii",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightcorrugatorsupercilii": {
-    "name": "Corrugator supercilii",
+    "name": "Corrugador do supercílio",
     "original": "corrugator supercilii",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Cabeça e pescoço",
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftmultifiduscervicis": {
     "name": "Multifidus cervicis",
     "original": "multifidus cervicis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightmultifiduscervicis": {
     "name": "Multifidus cervicis",
     "original": "multifidus cervicis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftmultifidusthoracis": {
     "name": "Multifidus thoracis",
     "original": "multifidus thoracis",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightmultifidusthoracis": {
     "name": "Multifidus thoracis",
     "original": "multifidus thoracis",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftmultifiduslumborum": {
     "name": "Multifidus lumborum",
     "original": "multifidus lumborum",
     "side": "left",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightmultifiduslumborum": {
     "name": "Multifidus lumborum",
     "original": "multifidus lumborum",
     "side": "right",
     "region": "Tronco",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftrotatores": {
     "name": "Rotatores",
     "original": "rotatores",
     "side": "left",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightrotatores": {
     "name": "Rotatores",
     "original": "rotatores",
     "side": "right",
     "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "kind": "Músculo",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftiliotibialtract": {
-    "name": "Iliotibial tract",
+    "name": "Trato iliotibial",
     "original": "iliotibial tract",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Coxa",
+    "kind": "Fáscia",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightiliotibialtract": {
-    "name": "Iliotibial tract",
+    "name": "Trato iliotibial",
     "original": "iliotibial tract",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Coxa",
+    "kind": "Fáscia",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftposteriorlayerofthoracolumbarfascia": {
-    "name": "Posterior layer do thoracolumbar fascia",
+    "name": "Lâmina posterior da fáscia toracolombar",
     "original": "posterior layer of thoracolumbar fascia",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Tronco",
+    "kind": "Fáscia",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightposteriorlayerofthoracolumbarfascia": {
-    "name": "Posterior layer do thoracolumbar fascia",
+    "name": "Lâmina posterior da fáscia toracolombar",
     "original": "posterior layer of thoracolumbar fascia",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Tronco",
+    "kind": "Fáscia",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftanteriorlayerofthoracolumbarfascia": {
-    "name": "Anterior layer do thoracolumbar fascia",
+    "name": "Lâmina anterior da fáscia toracolombar",
     "original": "anterior layer of thoracolumbar fascia",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Tronco",
+    "kind": "Fáscia",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightanteriorlayerofthoracolumbarfascia": {
-    "name": "Anterior layer do thoracolumbar fascia",
+    "name": "Lâmina anterior da fáscia toracolombar",
     "original": "anterior layer of thoracolumbar fascia",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Tronco",
+    "kind": "Fáscia",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "leftmiddlelayerofthoracolumbarfascia": {
-    "name": "Middle layer do thoracolumbar fascia",
+    "name": "Lâmina média da fáscia toracolombar",
     "original": "middle layer of thoracolumbar fascia",
     "side": "left",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Tronco",
+    "kind": "Fáscia",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   },
   "rightmiddlelayerofthoracolumbarfascia": {
-    "name": "Middle layer do thoracolumbar fascia",
+    "name": "Lâmina média da fáscia toracolombar",
     "original": "middle layer of thoracolumbar fascia",
     "side": "right",
-    "region": "Corpo inteiro",
-    "kind": "Músculo"
+    "region": "Tronco",
+    "kind": "Fáscia",
+    "review": "Nomenclatura editorial em revisão; nome original preservado."
   }
 };

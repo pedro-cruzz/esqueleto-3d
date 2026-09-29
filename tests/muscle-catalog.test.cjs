@@ -22,8 +22,15 @@ test('every muscular mesh has catalog metadata and correct laterality', () => {
     for (const field of ['name', 'original', 'region', 'kind']) assert.ok(entry[field]?.trim(), `${node.name}: ${field}`);
     const side = /\bleft\b/i.test(node.name) ? 'left' : /\bright\b/i.test(node.name) ? 'right' : 'midline';
     assert.equal(entry.side, side, node.name);
-    assert.ok(['Músculo', 'Tendão', 'Ligamento', 'Aponeurose', 'Cartilagem'].includes(entry.kind), `${node.name}: kind`);
+    assert.ok(['Músculo', 'Tendão', 'Ligamento', 'Aponeurose', 'Cartilagem', 'Fáscia', 'Retináculo', 'Membrana'].includes(entry.kind), `${node.name}: kind`);
   }
+});
+
+test('connective tissue is not presented as muscle, and shoulder and thigh groups are specific', () => {
+  assert.equal(catalog.leftiliotibialtract.kind, 'Fáscia');
+  assert.equal(catalog.flexorretinaculumofleftwrist.kind, 'Retináculo');
+  assert.equal(catalog.leftsupraspinatus.region, 'Membros superiores');
+  assert.equal(catalog.leftsemitendinosus.region, 'Coxa');
 });
 
 test('muscle catalog includes representative structures and regions', () => {

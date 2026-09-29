@@ -36,42 +36,72 @@
   </main>
   <div id="loading" role="status">Carregando modelo anatômico…</div>
   <aside id="ui" aria-label="Menu de estudo">
-    <button id="panel-toggle" class="sheet-toggle" type="button" aria-expanded="false" aria-controls="panel-body"><span class="sheet-handle"></span><span>Menu de estudo</span><span class="sheet-count">61 ajustes</span><span aria-hidden="true">⌃</span></button>
+    <div class="sheet-header">
+      <button id="panel-toggle" class="sheet-toggle" type="button" aria-expanded="false" aria-controls="panel-body" aria-label="Abrir ferramentas de estudo"><span class="sheet-handle" aria-hidden="true"></span><span class="sheet-title">Ferramentas de estudo</span><span class="sheet-count">Preparando atlas</span><span class="sheet-chevron" aria-hidden="true">⌃</span></button>
+      <button id="selection-shortcut" class="selection-shortcut" type="button" aria-controls="inspector" hidden>Ver ficha <span aria-hidden="true">↗</span></button>
+    </div>
     <div id="panel-body" class="panel-scroll">
       <div class="menu-heading"><span class="eyebrow">SEU LABORATÓRIO</span><h2>Explore a anatomia.</h2></div>
       <nav class="tabs" aria-label="Ferramentas de estudo"><button data-tab="explore" aria-pressed="true">Explorar</button><button data-tab="motion" aria-pressed="false">Movimentar</button><button data-tab="systems" aria-pressed="false">Sistemas</button></nav>
       <section id="tab-explore">
+        <div id="mobile-inspector"></div>
+        <details id="study-options" class="study-options">
+          <summary id="study-options-summary"><span>Filtros e visualização</span><span id="filter-options-count" hidden></span></summary>
+          <div class="study-options-body">
         <div class="display-modes" aria-label="Modo de visualização"><button id="mode-model" aria-pressed="true">Corpo em 3D</button><button id="mode-gallery" aria-pressed="false" disabled>Lista de peças</button></div>
-        <label class="search-label" for="bone-search">Buscar estrutura</label>
-        <div class="search-wrap"><span aria-hidden="true">⌕</span><input id="bone-search" type="search" placeholder="Ex.: fêmur, deltoide, C1…" autocomplete="off"></div>
         <label class="profile-label" for="body-profile">Perfil corporal<select id="body-profile"><option value="masculine">Masculino</option><option value="feminine">Feminino</option></select></label>
         <div class="filter-row"><label>Região<select id="region-filter"><option value="all">Todas as regiões</option></select></label><label>Lado<select id="side-filter"><option value="all">Todos</option><option value="right">Direito</option><option value="left">Esquerdo</option><option value="midline">Mediano</option></select></label></div>
         <label class="kind-label" for="kind-filter">Tipo de estrutura<select id="kind-filter"><option value="all">Todas as estruturas</option><option value="Estrutura óssea">Somente ossos e partes ósseas</option><option value="Músculo">Músculos</option><option value="Tendão">Tendões</option><option value="Ligamento">Ligamentos</option><option value="Aponeurose">Aponeuroses</option><option value="Cartilagem">Cartilagens</option><option value="Dente">Dentes</option><option value="Cavidade">Cavidades</option></select></label>
         <p class="filter-hint">A busca e os filtros também alteram o que aparece em 3D.</p>
-        <button id="clear-filters" class="subtle full" disabled>Mostrar todas as estruturas</button>
+        <section id="body-context-controls" class="study-tools" hidden aria-label="Referência corporal">
+          <label class="check-row"><input id="show-body-context" type="checkbox" checked> Silhueta humana de referência</label>
+          <div class="adjustment-control" data-compact-label="Transparência da silhueta">
+            <div class="tool-heading"><label for="body-context-opacity">Visibilidade da silhueta</label><output id="body-context-value" for="body-context-opacity">24%</output></div>
+            <input id="body-context-opacity" type="range" min="5" max="60" value="24" step="1">
+          </div>
+          <p id="body-context-note">Silhueta ilustrativa · proporções aproximadas.</p>
+        </section>
+        <section id="muscle-dissection" class="study-tools" hidden aria-labelledby="dissection-title">
+          <h3 id="dissection-title">Dissecação por camadas</h3>
+          <div class="tissue-key"><span><i class="muscle-swatch"></i>Músculos</span><span><i class="tendon-swatch"></i>Tecidos conjuntivos</span></div>
+          <p>Ative e toque nas estruturas para ocultá-las e revelar o que está abaixo. A câmera mantém a posição.</p>
+          <button id="dissection-mode" class="full" type="button" aria-pressed="false">Ativar dissecação por toque</button>
+          <button id="undo-dissection" class="subtle full" type="button" disabled>Desfazer última ocultação</button>
+          <p id="dissection-feedback" role="status">Nenhuma estrutura removida.</p>
+        </section>
         <div class="study-tools">
-          <div class="tool-heading"><label for="explode">Separar estruturas</label><output id="explode-value" for="explode">0%</output></div>
-          <input id="explode" type="range" min="0" max="100" value="0" disabled>
+          <div class="adjustment-control" data-compact-label="Separar estruturas">
+            <div class="tool-heading"><label for="explode">Separar estruturas</label><output id="explode-value" for="explode">0%</output></div>
+            <input id="explode" type="range" min="0" max="100" value="0" disabled>
+          </div>
           <p>Afaste as peças com espaço entre elas. Para vê-las uma a uma, use Lista de peças.</p>
           <label class="check-row"><input id="show-label" type="checkbox" checked> Nome na seleção e ao apontar</label>
           <label class="check-row"><input id="context-mode" type="checkbox"> Atenuar estruturas ao redor</label>
-          <button id="restore-study" class="subtle full" disabled>Restaurar visualização</button>
         </div>
-        <div id="mobile-inspector"></div>
-        <div class="list-heading"><h3>Estruturas</h3><span id="result-count" role="status">Carregando…</span></div>
+          </div>
+        </details>
+        <button id="restore-study" class="subtle full restore-workspace" disabled hidden>Restaurar visualização</button>
+        <label class="search-label" for="bone-search">Buscar estrutura</label>
+        <div class="search-wrap"><span aria-hidden="true">⌕</span><input id="bone-search" type="search" placeholder="Nome em português ou na fonte…" autocomplete="off"></div>
+        <div class="list-heading"><h3>Estruturas <span id="result-count" role="status">Carregando…</span></h3><button id="clear-filters" class="subtle" aria-label="Mostrar todas as estruturas" disabled>Mostrar todas</button></div>
         <div id="bone-list" aria-label="Lista de estruturas"></div>
       </section>
       <section id="tab-motion" hidden><div class="section-intro"><h3>Estude o movimento</h3><p>Abra uma região e ajuste as articulações. Os valores são aproximações biomecânicas.</p></div><button id="reset-pose" class="primary full">Restaurar pose neutra</button><div id="controls"></div></section>
       <section id="tab-systems" hidden><div class="section-intro"><a class="systems-menu-link" href="./#systems">← Escolher outro sistema no menu</a><h3>Uma visão integrada do corpo</h3><p>Alterne entre camadas anatômicas para comparar estruturas e relações do corpo humano.</p></div><div id="system-list"></div><p class="note">Os módulos ainda em preparação serão ativados quando seus modelos e conteúdos de estudo forem integrados.</p></section>
-      <div class="panel-footer"><span id="status" role="status">Aguardando o modelo…</span><a href="THIRD_PARTY_NOTICES.md" target="_blank" rel="noreferrer">Modelos Z-Anatomy / BodyParts3D · CC BY-SA 4.0 ↗</a></div>
+      <div class="panel-footer"><span id="status" role="status">Aguardando o modelo…</span><a href="THIRD_PARTY_NOTICES.md" target="_blank" rel="noreferrer">Fontes e licenças · Z-Anatomy / BodyParts3D ↗</a></div>
     </div>
   </aside>
   <div id="inspector-dock"><aside id="inspector" aria-label="Detalhes da estrutura">
     <div class="inspector-top"><span class="eyebrow">FICHA DA ESTRUTURA</span><button id="clear-selection" class="icon-button" aria-label="Limpar seleção" disabled>×</button></div>
     <div id="selection-empty"><div class="selection-symbol" aria-hidden="true">◎</div><h2>Cada estrutura,<br>uma descoberta.</h2><p>Selecione uma peça no modelo ou encontre seu nome na lista para começar.</p><div class="mini-rule"></div><span class="eyebrow">OBSERVE · ISOLE · EXPLORE</span></div>
-    <div id="selection-details" hidden><span id="detail-kind" class="pill"></span><h2 id="detail-name"></h2><p id="detail-original"></p><dl><div><dt>Região</dt><dd id="detail-region"></dd></div><div><dt>Lateralidade</dt><dd id="detail-side"></dd></div><div><dt>Visibilidade</dt><dd id="detail-visibility"></dd></div></dl><div class="detail-actions"><button id="focus-bone" class="primary">Focar estrutura</button><button id="isolate-bone" aria-pressed="false">Isolar estrutura</button><button id="isolate-region">Ver só esta região</button><button id="hide-bone">Ocultar estrutura</button></div><label class="tool-heading" for="separate-bone">Afastar esta estrutura <output id="separate-value" for="separate-bone">0%</output></label><input id="separate-bone" type="range" min="0" max="100" value="0"><p class="note">Direita e esquerda referem-se ao corpo representado.</p></div>
+    <div id="selection-details" hidden><span id="detail-kind" class="pill"></span><h2 id="detail-name" tabindex="-1"></h2><p id="detail-original"></p><dl><div><dt>Região</dt><dd id="detail-region"></dd></div><div><dt>Lateralidade</dt><dd id="detail-side"></dd></div><div><dt>Visibilidade</dt><dd id="detail-visibility"></dd></div></dl><div class="detail-actions"><button id="focus-bone" class="primary">Focar estrutura</button><button id="isolate-bone" aria-pressed="false">Isolar estrutura</button><button id="isolate-region">Ver só esta região</button><button id="hide-bone">Ocultar estrutura</button></div><div class="adjustment-control" data-compact-label="Afastar esta estrutura"><label class="tool-heading" for="separate-bone">Afastar esta estrutura <output id="separate-value" for="separate-bone">0%</output></label><input id="separate-bone" type="range" min="0" max="100" value="0"></div><p class="note">Direita e esquerda referem-se ao corpo representado.</p></div>
     <div class="inspector-foot"><span class="eyebrow">SOBRE ESTE ATLAS</span><p>Modelo educacional em evolução. Inclui ossos, partes ósseas, dentes e cartilagens; o total de peças não é uma contagem de ossos.</p></div>
   </aside></div>
+  <span id="selection-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></span>
+  <section id="compact-tools" aria-label="Ferramenta ativa" hidden>
+    <div class="compact-tools-bar"><span id="compact-context"></span><button id="compact-change" type="button" aria-controls="panel-body">Trocar ferramenta <span aria-hidden="true">⌃</span></button><button id="compact-close" class="icon-button" type="button" aria-label="Fechar controle compacto">×</button></div>
+    <div id="compact-control-content"></div>
+  </section>
   <footer class="bottom-bar"><span><i></i> <span id="visible-count">Preparando atlas</span></span><div><button id="center-camera">Centralizar</button><button id="fullscreen">Tela cheia ↗</button></div></footer>
   <script>
     window.addEventListener('error', () => {
@@ -81,7 +111,7 @@
       }
     });
   </script>
-  <script src="src/data/systems.js"></script><script src="src/data/body-profiles.js"></script><script src="src/data/anatomy-catalog.js"></script><script src="src/data/muscle-catalog.js"></script><script src="src/logic/study-logic.js"></script><script src="src/components/specimen-gallery.js"></script><script src="src/components/study.js"></script><script src="src/core/app.js"></script>
+  <script src="src/data/systems.js"></script><script src="src/data/body-profiles.js"></script><script src="src/core/catalog-loader.js"></script><script src="src/logic/study-logic.js"></script><script src="src/logic/dissection-history.js"></script><script src="src/components/specimen-gallery.js"></script><script src="src/components/mobile-controls.js"></script><script src="src/components/body-context.js"></script><script src="src/components/study.js"></script><script src="src/core/app.js"></script>
   <script src="src/core/register-sw.js"></script>
 </body>
 </html>

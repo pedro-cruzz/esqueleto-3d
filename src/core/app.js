@@ -1,11 +1,12 @@
 const params = new URLSearchParams(window.location.search);
-const activeSystemId = params.get('system') || 'skeletal';
-const activeSystem = (window.ANATOMY_SYSTEMS || []).find((system) => system.id === activeSystemId) || window.ANATOMY_SYSTEMS[0];
+const activeSystem = (window.ANATOMY_SYSTEMS || []).find((system) => system.id === params.get('system') && system.available !== false) || window.ANATOMY_SYSTEMS[0];
+const activeSystemId = activeSystem.id;
 const isMuscularSystem = activeSystemId === 'muscular';
+const isSkeletalSystem = activeSystemId === 'skeletal';
 let bodyProfileId = new URLSearchParams(window.location.search).get('profile') === 'feminine' ? 'feminine' : 'masculine';
 const MODEL_PATH = activeSystem?.model || 'public/models/esqueleto-anatomico.glb';
 const DRACO_PATH = 'public/draco/';
-const radiologyMode = params.get('radiology') === '1' && !isMuscularSystem;
+const radiologyMode = params.get('radiology') === '1' && isSkeletalSystem;
 
 const container = document.getElementById('canvas-container');
 const loadingEl = document.getElementById('loading');
@@ -124,6 +125,11 @@ let orbitHome = new THREE.Vector3(0, 1, 0);
 let radiologyMount = null;
 let radiologyControls = null;
 let loadedModel = null;
+let renderFrame = null;
+
+function requestRender() {
+  if (renderFrame === null) renderFrame = requestAnimationFrame(animate);
+}
 
 function createAnatomicalMaterials() {
   return {
@@ -145,13 +151,13 @@ function createAnatomicalMaterials() {
       metalness: 0,
     }),
     muscle: new THREE.MeshStandardMaterial({
-      color: 0xb85e59,
-      roughness: 0.82,
+      color: new THREE.Color(0xaa5348).convertSRGBToLinear(),
+      roughness: 0.74,
       metalness: 0,
       side: THREE.DoubleSide,
     }),
     tendon: new THREE.MeshStandardMaterial({
-      color: 0xd8c7a8,
+      color: new THREE.Color(0xe3dac6).convertSRGBToLinear(),
       roughness: 0.64,
       metalness: 0,
     }),
@@ -160,9 +166,10 @@ function createAnatomicalMaterials() {
 
 function anatomicalMaterialFor(mesh, materials) {
   const name = normalizeName(mesh.name);
+  if (!isSkeletalSystem && !isMuscularSystem) return mesh.material;
   if (isMuscularSystem) {
     if (/cartilage/.test(name)) return materials.cartilage;
-    return /tendon|aponeurosis|ligament/.test(name) ? materials.tendon : materials.muscle;
+    return /tendon|tendinous|aponeurosis|ligament|fascia|retinaculum|membrane|iliotibialtract/.test(name) && !/tensorfasciae/.test(name) ? materials.tendon : materials.muscle;
   }
   if (/tooth|incisor|canine|premolar|molar/.test(name)) return materials.teeth;
   if (/cartilage/.test(name)) return materials.cartilage;
@@ -180,31 +187,6 @@ function muscleTone(name) {
   return ((Math.abs(hash) % 9) - 4) / 100;
 }
 
-function symmetrizeMusclePairs(model) {
-  const pairs = new Map();
-  model.traverse((node) => {
-    if (!node.isMesh) return;
-    const name = String(node.name || '');
-    const side = /\bleft\b/i.test(name) ? 'left' : /\bright\b/i.test(name) ? 'right' : null;
-    if (!side) return;
-    const key = name
-      .toLowerCase()
-      .replace(/\b(left|right)\b/g, '')
-      .replace(/\s+/g, ' ')
-      .trim();
-    if (!pairs.has(key)) pairs.set(key, {});
-    pairs.get(key)[side] = node;
-  });
-
-  // O arquivo muscular contém algumas peças laterais com pequenos desvios de
-  // exportação. Use o lado esquerdo como referência e espelhe o direito para
-  // manter a leitura didática dos pares no Atlas.
-  const mirror = new THREE.Matrix4().makeScale(-1, 1, 1);
-  pairs.forEach(({ left, right }) => {
-    if (!left || !right) return;
-    right.geometry = left.geometry.clone().applyMatrix4(mirror);
-  });
-}
 
 function normalizeName(name) {
   return String(name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -599,9 +581,10 @@ function createControl(def) {
 function buildUI() {
   const sections = new Map();
   controlsRoot.innerHTML = '';
-  sheetCountEl.textContent = isMuscularSystem ? '467 estruturas' : `${CONTROL_DEFS.length} ajustes`;
+  sheetCountEl.textContent = isSkeletalSystem ? `${CONTROL_DEFS.length} ajustes` : 'Estruturas 3D';
+  profileSelect.closest('label').hidden = !activeSystem.proportionalProfiles;
 
-  if (isMuscularSystem) {
+  if (!isSkeletalSystem) {
     document.querySelector('[data-tab="motion"]').hidden = true;
     document.querySelector('[data-tab="motion"]').setAttribute('aria-hidden', 'true');
     return;
@@ -963,7 +946,8 @@ function frameModel(model) {
   const center = box.getCenter(new THREE.Vector3());
   const maxDimension = Math.max(size.x, size.y, size.z);
   const verticalFov = THREE.MathUtils.degToRad(camera.fov);
-  const distance = (Math.max(size.y, size.x / camera.aspect) / (2 * Math.tan(verticalFov / 2))) * 1.5;
+  const fitMargin = mobileMedia.matches ? 1.18 : 1.5;
+  const distance = (Math.max(size.y, size.x / camera.aspect) / (2 * Math.tan(verticalFov / 2))) * fitMargin;
 
   orbitHome = new THREE.Vector3(center.x, box.min.y + size.y * 0.52, center.z);
   cameraHome = new THREE.Vector3(
@@ -988,6 +972,12 @@ function normalizeModelForSystem(model) {
 }
 
 function prepareBodyProfileMeshes(model) {
+  // O GLB esquelético já traz cada peça na posição anatômica correta. A
+  // preparação abaixo recentra a geometria para permitir perfis proporcionais
+  // do modelo muscular; aplicá-la aos ossos sobrescreve as transformações do
+  // arquivo e empilha as estruturas no eixo central.
+  if (!isMuscularSystem || !activeSystem.proportionalProfiles) return;
+
   const verticalAxis = isMuscularSystem ? 'z' : 'y';
   let verticalMin = Infinity;
   let verticalMax = -Infinity;
@@ -1226,8 +1216,8 @@ function buildRadiologyControls() {
 function initScene() {
   const compactRendering = mobileMedia.matches || coarsePointerMedia.matches;
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x10181e);
-  scene.fog = isMuscularSystem ? null : new THREE.Fog(0x10181e, 5, 14);
+  scene.background = new THREE.Color(isMuscularSystem ? 0x141513 : 0x10181e);
+  scene.fog = isSkeletalSystem ? new THREE.Fog(0x10181e, 5, 14) : null;
 
   camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.set(0, 1.45, 3.0);
@@ -1241,31 +1231,32 @@ function initScene() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.outputEncoding = THREE.sRGBEncoding;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = isMuscularSystem ? 1.22 : 1.08;
+  renderer.toneMappingExposure = isMuscularSystem ? 1.1 : 1.08;
   renderer.physicallyCorrectLights = true;
-  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.enabled = isSkeletalSystem && !compactRendering;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   container.appendChild(renderer.domElement);
 
   orbitControls = new THREE.OrbitControls(camera, renderer.domElement);
   orbitControls.target.set(0, 1, 0);
   orbitControls.enableDamping = true;
+  orbitControls.addEventListener('change', requestRender);
 
-  const ambient = new THREE.AmbientLight(0xfff6e8, 0.55);
+  const ambient = new THREE.AmbientLight(0xfff6e8, isMuscularSystem ? 0.42 : 0.55);
   scene.add(ambient);
 
-  const hemi = new THREE.HemisphereLight(0xb9ddf2, 0x211c18, 0.8);
+  const hemi = new THREE.HemisphereLight(isMuscularSystem ? 0xf5efe4 : 0xb9ddf2, 0x211c18, isMuscularSystem ? 0.6 : 0.8);
   hemi.position.set(0, 20, 0);
   scene.add(hemi);
 
-  const directional = new THREE.DirectionalLight(0xfff4df, isMuscularSystem ? 2.8 : 2.4);
+  const directional = new THREE.DirectionalLight(0xfff4df, isMuscularSystem ? 2.5 : 2.4);
   directional.position.set(4, 8, 5);
   directional.castShadow = true;
   directional.shadow.mapSize.width = compactRendering ? 1024 : 2048;
   directional.shadow.mapSize.height = compactRendering ? 1024 : 2048;
   scene.add(directional);
 
-  const fill = new THREE.DirectionalLight(0x8ecdf0, 0.55);
+  const fill = new THREE.DirectionalLight(isMuscularSystem ? 0xf1f0e9 : 0x8ecdf0, isMuscularSystem ? 0.4 : 0.55);
   fill.position.set(-4, 3, -2);
   scene.add(fill);
 
@@ -1287,7 +1278,7 @@ function initScene() {
   grid.material.transparent = true;
   grid.material.opacity = 0.22;
   grid.position.y = 0.001;
-  grid.visible = !isMuscularSystem;
+  grid.visible = isSkeletalSystem;
   scene.add(grid);
   if (radiologyMode) buildRadiologyRoom();
 }
@@ -1303,18 +1294,24 @@ function loadModel() {
     (gltf) => {
       const model = gltf.scene;
       normalizeModelForSystem(model);
-      if (isMuscularSystem) symmetrizeMusclePairs(model);
       prepareBodyProfileMeshes(model);
       applyBodyProfile(model, bodyProfileId);
       const anatomicalMaterials = createAnatomicalMaterials();
+      const catalog = window.ANATOMY_CATALOGS?.[activeSystemId];
+      const sourceKeys = new Map(Object.entries(catalog || {}).map(([key, entry]) => [entry.sourceNode, key]));
       model.traverse((node) => {
         if (node.isMesh) {
+          if (activeSystem.preview) {
+            const association = gltf.parser.associations.get(node);
+            node.userData.catalogKey = association?.type === 'nodes' ? sourceKeys.get(association.index) : undefined;
+            if (!node.userData.catalogKey) { node.visible = false; return; }
+          }
           node.castShadow = true;
           node.receiveShadow = true;
           node.material = anatomicalMaterialFor(node, anatomicalMaterials);
           if (isMuscularSystem && node.material === anatomicalMaterials.muscle) {
             node.material = node.material.clone();
-            node.material.color.offsetHSL(0, 0.015, muscleTone(node.name));
+            node.material.color.offsetHSL(0, 0.005, muscleTone(node.name) * 0.3);
           }
         }
       });
@@ -1327,21 +1324,26 @@ function loadModel() {
         }
       });
 
-      const anatomicalMeshCount = !isMuscularSystem && boneByName.size === 0 ? buildAnatomicalRig(model) : 0;
+      const anatomicalMeshCount = isSkeletalSystem && boneByName.size === 0 ? buildAnatomicalRig(model) : 0;
 
       console.log('Bones encontrados:', Array.from(boneByName.keys()));
 
       frameModel(model);
       if (radiologyMode) mountRadiologyModel(model);
-      if (!isMuscularSystem) bindBones();
+      if (isSkeletalSystem) bindBones();
       if (radiologyMode) applyRadiologyPatientPose();
-      AnatomyStudy.init({ model, camera, renderer, orbitControls, centerCamera });
+      AnatomyStudy.init({ model, camera, renderer, orbitControls, centerCamera, requestRender });
+      if (activeSystemId === 'organs') {
+        BodyContext.init({ model, scene, requestRender, onReady: () => AnatomyStudy.centerView() });
+      }
       if (anatomicalMeshCount > 0) {
         setStatus(`Pronto. ${CONTROL_DEFS.length} controles de movimento conectados.`);
-      } else if (isMuscularSystem) {
+      } else {
         setStatus(`Pronto. ${activeSystem.name} carregado.`);
       }
       updateLoading('Modelo carregado.');
+      requestRender();
+      dracoLoader.dispose();
       setTimeout(() => {
         loadingEl.style.display = 'none';
       }, 350);
@@ -1357,6 +1359,7 @@ function loadModel() {
       }
     },
     (error) => {
+      dracoLoader.dispose();
       console.error('Erro ao carregar', MODEL_PATH, error);
       updateLoading(`Erro ao carregar ${activeSystem.name.toLowerCase()}. Verifique os arquivos do app.`);
       setStatus('Não foi possível carregar o modelo local.');
@@ -1365,7 +1368,7 @@ function loadModel() {
 }
 
 function animate() {
-  requestAnimationFrame(animate);
+  renderFrame = null;
   if (document.hidden || AnatomyStudy.isGallery()) return;
   orbitControls.update();
   renderer.render(scene, camera);
@@ -1373,6 +1376,9 @@ function animate() {
 }
 
 function attachActions() {
+  document.addEventListener('input', requestRender);
+  document.addEventListener('click', requestRender);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) requestRender(); });
   resetBtn.addEventListener('click', resetPose);
   profileSelect.value = bodyProfileId;
   profileSelect.addEventListener('change', () => {
@@ -1397,17 +1403,30 @@ function attachActions() {
 
   const setPanelOpen = (open) => {
     const shouldOpen = mobileMedia.matches && open;
+    const returnFocus = !shouldOpen && mobileMedia.matches && panelBody.contains(document.activeElement);
+    if (returnFocus) {
+      panelToggle.focus({ preventScroll: true });
+    }
     uiEl.classList.toggle('is-open', shouldOpen);
     document.body.classList.toggle('panel-open', shouldOpen);
-    panelToggle.setAttribute('aria-expanded', String(shouldOpen));
+    panelToggle.setAttribute('aria-expanded', String(!mobileMedia.matches || shouldOpen));
+    panelToggle.setAttribute('aria-label', shouldOpen ? 'Recolher ferramentas de estudo' : 'Abrir ferramentas de estudo');
     panelBody.inert = mobileMedia.matches && !shouldOpen;
+    if (panelBody.inert) panelBody.setAttribute('aria-hidden', 'true');
+    else panelBody.removeAttribute('aria-hidden');
+    window.MobileStudyControls?.setMenuOpen(shouldOpen);
+    if (returnFocus) window.MobileStudyControls?.focusVisibleControl();
   };
+
+  window.MobileStudyControls = window.createMobileStudyControls({ media: mobileMedia, setPanelOpen });
 
   let pointerStartY = null;
   let suppressNextClick = false;
 
   panelToggle.addEventListener('pointerdown', (event) => {
+    if (!event.isPrimary) return;
     pointerStartY = event.clientY;
+    panelToggle.setPointerCapture(event.pointerId);
   });
 
   panelToggle.addEventListener('pointerup', (event) => {
@@ -1418,6 +1437,7 @@ function attachActions() {
     if (Math.abs(distance) < 34) return;
     suppressNextClick = true;
     setPanelOpen(distance < 0);
+    setTimeout(() => { suppressNextClick = false; }, 0);
   });
 
   panelToggle.addEventListener('pointercancel', () => {
@@ -1433,7 +1453,11 @@ function attachActions() {
   });
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && mobileMedia.matches) setPanelOpen(false);
+    if (event.key === 'Escape' && mobileMedia.matches && uiEl.classList.contains('is-open')) {
+      event.preventDefault();
+      setPanelOpen(false);
+      window.MobileStudyControls?.focusVisibleControl();
+    }
   });
 
   const syncPanelMode = () => {
@@ -1444,6 +1468,8 @@ function attachActions() {
       document.body.classList.remove('panel-open');
       panelToggle.setAttribute('aria-expanded', 'true');
       panelBody.inert = false;
+      panelBody.removeAttribute('aria-hidden');
+      window.MobileStudyControls?.setMenuOpen(false);
     }
   };
 
@@ -1454,6 +1480,7 @@ function attachActions() {
   }
 
   let resizeFrame = null;
+  let previousViewport = { width: 0, height: 0, pixelRatio: 0 };
   const resizeRenderer = () => {
     cancelAnimationFrame(resizeFrame);
     resizeFrame = requestAnimationFrame(() => {
@@ -1461,10 +1488,16 @@ function attachActions() {
       const viewport = container.getBoundingClientRect();
       const width = Math.max(1, Math.round(viewport.width));
       const height = Math.max(1, Math.round(viewport.height));
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, compactRendering ? 1.4 : 2);
+      const sizeChanged = width !== previousViewport.width || height !== previousViewport.height;
+      if (!sizeChanged && pixelRatio === previousViewport.pixelRatio) return;
+      previousViewport = { width, height, pixelRatio };
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, compactRendering ? 1.4 : 2));
+      renderer.setPixelRatio(pixelRatio);
       renderer.setSize(width, height);
+      requestRender();
+      if (sizeChanged && loadedModel && !AnatomyStudy.isGallery()) AnatomyStudy.centerView();
     });
   };
 
@@ -1490,8 +1523,12 @@ function start() {
   initScene();
   if (radiologyMode) buildRadiologyControls();
   attachActions();
-  loadModel();
-  animate();
+  window.loadAnatomyCatalog(activeSystemId).then(loadModel).catch(error => {
+    console.error(error);
+    updateLoading('Não foi possível carregar o catálogo. Recarregue a página para tentar novamente.');
+    setStatus('Catálogo indisponível.');
+  });
+  requestRender();
 }
 
 try {

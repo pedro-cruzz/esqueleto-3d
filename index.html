@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#10181e">
+  <meta name="theme-color" content="#141513">
   <meta name="description" content="Escolha um sistema e uma forma de estudar anatomia no Pose Lab.">
   <title>Pose Lab | Menu de estudo</title>
   <link rel="manifest" href="public/manifest.json">
@@ -17,28 +17,32 @@
   <a class="skip-link" href="#main">Ir para o conteúdo</a>
   <header class="menu-header">
     <a class="brand" href="./" aria-label="Pose Lab, início"><img src="public/icon.svg" alt=""><span>Pose Lab<small>ATLAS DE ANATOMIA</small></span></a>
-    <nav aria-label="Navegação principal"><a href="#systems" aria-current="page">Sistemas</a><a href="#radiology">Radiologia</a><a href="#study-options">Opções de estudo</a></nav>
-    <span class="header-note">Seu laboratório de anatomia</span>
+    <nav aria-label="Navegação principal"><a href="#systems">Sistemas</a><a href="#radiology">Radiologia</a><a href="#study-options">Como estudar</a></nav>
+    <a class="header-cta" href="atlas.html?system=skeletal&view=model">Entrar no atlas <span aria-hidden="true">↗</span></a>
   </header>
   <main id="main" class="menu-main">
     <section class="welcome" aria-labelledby="welcome-title">
-      <div class="welcome-copy"><span class="eyebrow">PLACA 01 · BIBLIOTECA HUMANA</span><h1 id="welcome-title">O corpo humano,<br><em>em camadas.</em></h1><p>Um laboratório visual para compreender estruturas, relações e movimentos — com precisão e espaço para observar.</p><div class="welcome-meta"><span><strong>744</strong> estruturas indexadas</span><span><strong>02</strong> sistemas disponíveis</span></div><a class="welcome-cta" href="atlas.html?system=skeletal&view=model">Começar pelo esqueleto <span aria-hidden="true">↗</span></a></div>
-      <div class="welcome-plate" aria-label="Prancha ilustrativa do sistema esquelético">
-        <div class="plate-header"><span>POSE LAB / ATLAS</span><span>TA · 001</span></div>
-        <div class="plate-rule"></div>
-        <svg class="plate-figure" viewBox="0 0 260 520" fill="none" aria-hidden="true">
-          <circle cx="130" cy="53" r="31" stroke="currentColor" stroke-width="1.5"/><path d="M115 64c7 8 23 8 30 0M119 49h7m8 0h7M130 84v48m-32 3c18-10 46-10 64 0M98 135c13 16 51 16 64 0M101 156c14 16 44 16 58 0M106 179c11 13 37 13 48 0M112 200c8 10 28 10 36 0M130 132v107M87 140l-25 108m111-108 25 108M62 248l-17 112m153-112 17 112M45 360l-21 103m191-103 21 103M112 238c-12 17-18 37-18 61l5 31M148 238c12 17 18 37 18 61l-5 31M99 331c11 17 51 17 62 0l-10 31c-12 8-30 8-42 0Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="62" cy="248" r="4" fill="currentColor"/><circle cx="198" cy="248" r="4" fill="currentColor"/><circle cx="45" cy="360" r="4" fill="currentColor"/><circle cx="215" cy="360" r="4" fill="currentColor"/><circle cx="24" cy="463" r="4" fill="currentColor"/><circle cx="236" cy="463" r="4" fill="currentColor"/>
-        </svg>
-        <span class="plate-axis plate-axis-top">SUPERIOR</span><span class="plate-axis plate-axis-bottom">INFERIOR</span><span class="plate-callout callout-one">01 <b>AXIAL</b></span><span class="plate-callout callout-two">02 <b>APENDICULAR</b></span>
+      <div class="welcome-copy">
+        <span class="eyebrow"><span class="status-dot" aria-hidden="true"></span> SEU LABORATÓRIO DE ANATOMIA</span>
+        <h1 id="welcome-title">O corpo humano,<br><em>em camadas.</em></h1>
+        <p>Explore estruturas em 3D, descubra suas relações e estude cada detalhe no seu ritmo.</p>
+        <div class="welcome-actions"><a class="welcome-cta" href="atlas.html?system=skeletal&view=model">Explorar o atlas <span aria-hidden="true">↗</span></a><a class="welcome-secondary" href="#systems">Escolher um sistema <span aria-hidden="true">↓</span></a></div>
+        <div class="welcome-meta"><span><strong>2.122</strong> estruturas indexadas</span><span><strong>05</strong> sistemas em 3D</span></div>
       </div>
+      <figure class="anatomy-plate">
+        <div class="plate-grid" aria-hidden="true"></div>
+        <span class="plate-index" aria-hidden="true">FIG. 01</span>
+        <img src="public/images/skeleton-study.webp" width="800" height="900" alt="Vista anterior do esqueleto: crânio, caixa torácica e pelve." fetchpriority="high">
+        <figcaption><span>Sistema esquelético<small>Vista anterior · modelo do atlas</small></span><a href="atlas.html?system=skeletal&view=model" aria-label="Explorar o sistema esquelético em 3D">3D <span aria-hidden="true">↗</span></a></figcaption>
+      </figure>
     </section>
     <section id="systems" aria-labelledby="systems-title">
-      <div class="section-heading"><h2 id="systems-title">Sistemas anatômicos</h2><span>02 disponíveis · 02 em preparação</span></div>
+      <div class="section-heading"><div><span class="eyebrow">ESCOLHA POR ONDE COMEÇAR</span><h2 id="systems-title">Sistemas anatômicos</h2></div><span>02 disponíveis <span aria-hidden="true">/</span> 03 em prévia</span></div>
       <div id="systems-grid" class="systems-grid"></div>
       <noscript><p>Ative o JavaScript para visualizar o catálogo de sistemas e usar o atlas 3D.</p></noscript>
     </section>
     <section id="radiology" class="radiology-section" aria-labelledby="radiology-title">
-      <div class="section-heading"><h2 id="radiology-title">Radiologia</h2><span>Ferramenta independente</span></div>
+      <div class="section-heading"><h2 id="radiology-title">Do atlas à prática</h2><span>Módulo de radiologia</span></div>
       <a class="radiology-launch" href="radiologia.html">
         <span class="radiology-index">RX · 01</span>
         <span class="radiology-copy"><strong>Mesa de raio X</strong><span>Estude o posicionamento da pelve AP e confira como a rotação altera os critérios de simetria.</span></span>
@@ -46,14 +50,14 @@
       </a>
     </section>
     <section id="study-options" aria-labelledby="options-title">
-      <div class="section-heading"><h2 id="options-title">Como você quer estudar?</h2><span>Opções do sistema esquelético</span></div>
+      <div class="section-heading"><h2 id="options-title">Um modelo. Diferentes formas de aprender.</h2><span>Sistema esquelético</span></div>
       <div class="study-options">
         <a class="option-card" href="atlas.html?view=model"><span class="option-number">01</span><div><h3>Explorar em 3D</h3><p>Gire o corpo, identifique estruturas e visualize uma região por vez.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
         <a class="option-card" href="atlas.html?view=gallery"><span class="option-number">02</span><div><h3>Lista de ossos</h3><p>Veja as peças separadas e abra cada uma para estudar em detalhe.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
         <a class="option-card" href="atlas.html?view=motion"><span class="option-number">03</span><div><h3>Movimentos articulares</h3><p>Ajuste a pose e explore os movimentos por região do corpo.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
       </div>
     </section>
-    <aside class="development-note"><span aria-hidden="true">＋</span><p><strong>Um atlas em expansão.</strong> O sistema muscular já está disponível. Sistema nervoso e órgãos continuam em preparação.</p></aside>
+    <aside class="development-note"><span aria-hidden="true">＋</span><p><strong>Um atlas em expansão.</strong> Cardiovascular, nervoso e órgãos estão disponíveis para avaliação. Nomenclatura e agrupamentos das prévias aguardam revisão anatômica.</p></aside>
   </main>
   <footer class="menu-footer"><span>Pose Lab · Estudo de anatomia</span><a href="THIRD_PARTY_NOTICES.md" target="_blank" rel="noreferrer">Créditos do modelo ↗</a></footer>
 </body>

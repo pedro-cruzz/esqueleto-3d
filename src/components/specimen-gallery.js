@@ -47,6 +47,8 @@ window.SpecimenGallery = (() => {
       const entry = pending.shift();
       try {
         if (!ready) setupRenderer();
+        material.color.copy(entry.baseColor);
+        material.side = entry.mesh.material.side;
         const mesh = new THREE.Mesh(entry.mesh.geometry, material);
         mesh.quaternion.copy(entry.previewQuaternion); mesh.scale.copy(entry.previewScale);
         scene.add(mesh); mesh.updateMatrixWorld(true);

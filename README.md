@@ -169,7 +169,13 @@ inicializa WebGL; o atlas carrega suas bibliotecas ao entrar no módulo disponí
   renderizador reutilizado. O visualizador principal pausa enquanto a lista está aberta.
 - `Mostrar todas as estruturas` limpa os filtros e encerra o isolamento, mantendo
   a pose e os valores de separação. `Centralizar` enquadra o grupo visível.
-- Abra `Movimentar` para alterar a pose. No celular, abra primeiro `Menu de estudo`.
+- Abra `Movimentar` para alterar a pose. No celular, abra `Ferramentas de estudo`
+  e escolha o movimento. O menu recolhe e o slider aparece na faixa inferior,
+  mantendo o tamanho e o zoom da cena. `Separar estruturas` e `Afastar esta
+  estrutura` usam o mesmo fluxo.
+- `Trocar ferramenta` reabre as opções sem zerar o ajuste. O botão de fechar
+  dispensa o controle compacto e preserva a pose; use `Restaurar pose neutra`
+  ou `Restaurar visualização` para desfazer os ajustes correspondentes.
 - Toque no nome de uma região corporal para expandir ou recolher seus controles.
 - Use `Restaurar pose neutra` para zerar todos os movimentos.
 - Use `Centralizar` para restaurar a câmera.

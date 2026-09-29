@@ -13,6 +13,7 @@ const mimeTypes = {
   '.json': 'application/json; charset=utf-8',
   '.svg': 'image/svg+xml',
   '.wasm': 'application/wasm',
+  '.webp': 'image/webp',
 };
 
 const server = createServer((request, response) => {
@@ -25,7 +26,10 @@ const server = createServer((request, response) => {
       response.end('Not found');
       return;
     }
-    response.writeHead(200, { 'Content-Type': mimeTypes[extname(filePath)] || 'application/octet-stream' });
+    response.writeHead(200, {
+      'Content-Type': mimeTypes[extname(filePath)] || 'application/octet-stream',
+      'Cache-Control': 'no-cache',
+    });
     createReadStream(filePath).pipe(response);
   } catch {
     response.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
